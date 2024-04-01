@@ -643,7 +643,7 @@ input[type="tel"] {
   }
 
   .container h3{
-    font-size: 22px;
+    font-size: 20px;
 
   }
 
@@ -783,7 +783,7 @@ input[type="tel"] {
     display: flex; /* Maintains your flex setup for the footer */
     justify-content: space-between;
     padding: 20px;
-    padding-top: 1000px;
+    padding-top: 100px;
     
   }
 
@@ -836,6 +836,11 @@ input[type="tel"] {
     line-height: 1.2; 
   }
 
+  h3{
+    font-size: 15px; 
+    line-height: 1.2; 
+  }
+
   .contactus   h2 {
     font-size: 20px; 
     line-height: 1.2; 
@@ -853,7 +858,7 @@ input[type="tel"] {
   }
 
   .get-free-quote {
-    height: 315px; 
+    height: 515px; 
     padding: 20px 20px;
     margin: 200px 0;
   }
