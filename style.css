@@ -426,11 +426,12 @@ section {
   align-items: center;
   color: #FFFFFA;
   cursor: pointer; /* Changes the mouse cursor on hover */
-  width: fit-content; /* This ensures the button only takes up as much width as it needs */
+  width: fit-content; 
+  margin-top: 30px;
 }
 
-.who-are-we, 
-.benifits,
+.container-wrapper1, 
+.container-wrapper2,
 .get-free-quote {
   display: flex;
   flex-direction: column;
@@ -443,6 +444,11 @@ section {
   position: relative;
   align-items: flex-start;
   margin: 50px 0;
+  overflow: hidden;
+}
+
+.get-free-quote {
+  margin:150px 0;
 }
 
 .right-container {
@@ -479,7 +485,9 @@ section {
   right: 0;
   background-color: #020412;
   width: 60%; 
-  padding: 20px; 
+  padding: 20px 50px;
+
+
 }
 
 
@@ -558,7 +566,7 @@ input[type="tel"] {
 }
 .sendmail-box {
   width: 70%;
-  margin-top: 40px;
+  margin-top: 200px;
 
 }
 
@@ -567,6 +575,36 @@ input[type="tel"] {
   text-transform: uppercase;
 
 }
+
+
+
+.ABN-About .container-wrapper1 p,
+.ABN-About .container-wrapper2 p {
+  margin-bottom: 1em;
+  padding-left: 1.5em; 
+  position: relative; 
+  margin-right: 10px;
+  
+}
+
+.ABN-About .container-wrapper1 p::before,
+.ABN-About .container-wrapper2 p::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 50%; /* Center the bullet vertically */
+  transform: translateY(-50%); /* Adjust vertical position */
+  font-size: 1em; /* Adjust the size of the bullet if needed */
+  color: inherit; 
+  
+}
+
+
+.ABN-About .container-wrapper1, .right-container,
+.ABN-About .container-wrapper2, .left-container  {
+  z-index: 2; 
+}
+
 
 @media (max-width: 1440px) {
   .nav-wrapper div ul {
@@ -606,6 +644,10 @@ input[type="tel"] {
     bottom: 3px;
   }
 
+  .ABN-About .container-wrapper1 {
+    margin-top: 100px;
+  }
+
 
 }
 
@@ -626,6 +668,41 @@ input[type="tel"] {
   .link-get-in-touch {
     bottom: 3px;
   }
+
+  .get-free-quote {
+    height: 1015px; 
+    padding: 20px 20px;
+
+  }
+
+  .ABN-About .container-wrapper1 {
+    margin-top: 180px;
+  }
+
+  .contactus-form {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .arrow-container {
+    font-size: 48px; /* Adjust size for smaller screens */
+    order: -1; /* Make sure the arrow appears on top */
+  }
+
+  .form-fields-container {
+    margin-left: 0;
+  }
+
+  .contactus-row {
+    flex-direction: column;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 100%; /* Full width for smaller screens */
+  }
+
   
 }
 
@@ -647,6 +724,34 @@ input[type="tel"] {
 
   }
 
+  .arrow-icon {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+  }
+  
+  .quote-container,
+  .contactus-form {
+    padding: 0 15px; /* Adjust padding as needed */
+  }
+  
+  .quote-container button {
+    width: 100%;
+    padding: 15px 0; /* Adjust padding as needed for better tap targets */
+  }
+
+  .textl-container {
+    width: 80%; 
+    margin-right: 70px;
+    
+  }
+
+  .textr-container {
+    width: 80%; 
+    display: block;
+  }
+
+
+
 }
 
 
@@ -660,6 +765,10 @@ input[type="tel"] {
 
   main {
     flex: 1; 
+  }
+
+  h1 {
+    font-size: 35px;
   }
 
   .container {
@@ -780,31 +889,31 @@ input[type="tel"] {
   }
 
   .footer-container {
-    display: flex; /* Maintains your flex setup for the footer */
+    display: block; 
     justify-content: space-between;
     padding: 20px;
     padding-top: 100px;
-    
+
   }
 
-  .footer-main {
-    flex-direction: column;
- }
+  .footer-main, .footer-bottom {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: left; /* Center-align the child elements */
+    text-align: left; /* Ensure text is centered as the elements are now stacked */
+  }
 
-  .footer-section {
-      margin-bottom: 20px;
-      margin-right: 0; 
-      }
-
-  .footer-bottom {
-      flex-direction: column;
-      display: flex;
+  .footer-section, .footer-bottom {
+    width: 100%; /* Ensure they take the full width of their container */
+    margin-right: 0; /* Reset any right margin that might be present */
   }
 
   .social-icons {
       margin-top: 10px; /
   }
 
+  .social-icon {
+    margin: 0 5px; /* Adjust spacing around social icons for smaller screens */
+  }
 
   .footer-line{
 
@@ -842,7 +951,7 @@ input[type="tel"] {
   }
 
   .contactus   h2 {
-    font-size: 20px; 
+    font-size: 18px; 
     line-height: 1.2; 
   }
   .button {
@@ -850,58 +959,96 @@ input[type="tel"] {
     margin: 10px 0;
   }
 
-  .who-are-we, 
-  .benifits {
-    height: 515px; 
+  .container-wrapper1, 
+  .container-wrapper2 {
+    align-items: flex-start; 
+    height: auto; 
     padding: 20px 20px;
-    margin: 60px 0 100px;
+    margin: 20px 0 50px;
+    width: 100%;
   }
 
   .get-free-quote {
-    height: 515px; 
+    height: 815px; 
     padding: 20px 20px;
-    margin: 200px 0;
+    margin: 0;
+
   }
   
   .right-container, .left-container  {
     display: none;
   }
   
-  .textl-container {
-    width: 80%; 
-    margin-right: 70px;
-    
+
+
+  .textr-container, 
+  .textl-container  {
+    position: relative; /* Change position to relative for better control on mobile */
+    width: 100%; /* Use the full width for mobile views */
+    padding: 20px; /* Adjust padding to ensure text doesn't touch the edges */
+    text-align: left; /* Ensure text aligns to the left */
   }
 
-  .textr-container {
-    width: 80%; 
-  }
-
-  .contactus-form {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .arrow-container {
-    font-size: 48px; /* Adjust size for smaller screens */
-    order: -1; /* Make sure the arrow appears on top */
-  }
-
-  .form-fields-container {
-    margin-left: 0;
-  }
-
+  
+  .contactus-form,
+  .form-fields-container,
   .contactus-row {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
   }
 
+  .form-fields-container, 
+  .contactus-row  { 
+    margin-right:110px ;
+  }
+  
+  .quote-container {
+    padding-left: 15px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  .sendmail-box {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px 0px;
+  }
+  
   input[type="text"],
   input[type="email"],
   input[type="tel"] {
-    width: 100%; /* Full width for smaller screens */
+    margin-bottom: 25px;
+  }
+  
+  .sendmail-box h3 {
+    margin-top: 10px;
+    text-align: left;
   }
 
 
+  .row {
+    margin: 0; /* Adjust based on your design */
+  }
+
+  .container {
+    width: 100%; /* Full width for mobile devices */
+    margin-bottom: 20px; /* Keep consistent spacing */
+    margin-left: 20px;
+    padding: 20px; /* Adjust padding as necessary */
+  }
+
+  .image-placeholder {
+    width: 100%; /* Allow image to scale with the container */
+    height: auto; /* Keep the aspect ratio of the placeholder */
+  }
+
 }
+
+
+
+
+
 
  
