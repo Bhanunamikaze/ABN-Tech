@@ -121,12 +121,17 @@ p {
 
 }
 
+.logo-link {
+  position: absolute;
+  top: 0;
+  top: 0;
+  left: 55px;
+}
+
 .logo {
   position: absolute;
   width: 117px;
   height: 35px;
-  top: 0;
-  left: 55px;
 
 }
 
@@ -344,6 +349,14 @@ section {
   height: 210px;
   background-color: #000;
   margin-bottom: 20px;
+  }
+
+  .icon-placeholder{
+    width: 72px;
+    height: 72px;
+    background-color: rgba(255, 255, 250, 0.16);
+
+
   }
 
 /* Slider Container */
@@ -604,6 +617,63 @@ input[type="tel"] {
 .ABN-About .container-wrapper2, .left-container  {
   z-index: 2; 
 }
+
+.ABN-About .container {
+  align-items: baseline;
+  margin: 10px;
+  padding: 40px;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centering the items in the container */
+  gap: 20px; /* Space between the items */
+  padding: 20px; /* Space around the entire grid */
+}
+
+.stat-item {
+  flex: 1 0 calc(25% - 40px); /* Adjusting the flex-basis to calculate the right width */
+  height: 372px;
+  color: #020412;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+
+/* Specific background colors for each box */
+.stat-item:nth-child(1) {  background-image: url("images/1.svg"); background-size: cover;}
+.stat-item:nth-child(2) {  background-image: url("images/2.svg"); background-size: cover; }
+.stat-item:nth-child(3) {  background-image: url("images/3.svg"); background-size: cover; }
+.stat-item:nth-child(4) {  background-image: url("images/4.svg"); background-size: cover;}
+
+
+
+.stat-number { 
+  color: #020412; 
+  font-family: Inter;
+  font-size: 86px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.stat-description {
+  color: #020412;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; 
+  padding-top: 30px;
+  }
 
 
 @media (max-width: 1440px) {
@@ -1036,19 +1106,10 @@ input[type="tel"] {
     width: 100%; /* Full width for mobile devices */
     margin-bottom: 20px; /* Keep consistent spacing */
     margin-left: 20px;
-    padding: 20px; /* Adjust padding as necessary */
+    padding: 20px;
   }
 
-  .image-placeholder {
-    width: 100%; /* Allow image to scale with the container */
-    height: auto; /* Keep the aspect ratio of the placeholder */
+  .stat-item {
+    transform: scale(0.8); /* Scale down the size */
   }
-
 }
-
-
-
-
-
-
- 
