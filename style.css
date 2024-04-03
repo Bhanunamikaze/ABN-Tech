@@ -43,6 +43,16 @@ h3 {
 
 }
 
+h4 {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; 
+}
+
 p {
   color: #FFFFFA;
   font-family: Inter;
@@ -531,9 +541,15 @@ section {
   align-items: center;
 }
 
+.ABN-Contactus .quote-container {
+  margin-bottom: 0;;
+  padding-bottom: 0;
+}
+
 .quote-container button {
   display:inline;
   margin-top: 30px;
+  margin-bottom: 30px;
 
 }
 .contactus-form {
@@ -543,6 +559,18 @@ section {
   height: 100%;
   padding: 70px;
   width: 100%;
+}
+
+.ABN-Contactus .ask-questions .contactus-form,
+.ABN-Contactus .ask-questions .form-fields-container 
+ { 
+  padding-left: 0;
+  margin-left: 0;
+  display: block;
+}
+
+.ABN-Contactus .ask-questions .contactus-row {
+  padding-left:  0;
 }
 
 .form-fields-container {
@@ -562,7 +590,8 @@ section {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+input[type="message"]  {
   background: transparent;
   border: none;
   border-bottom: 1px solid #fff;
@@ -577,6 +606,20 @@ input[type="tel"] {
   font-weight: 400;
   line-height: 26px; 
 }
+
+input[type="message"]  {
+  width: 100%;
+}
+
+.ABN-Contactus .ask-questions input[type="text"],
+.ABN-Contactus .ask-questions input[type="email"],
+.ABN-Contactus .ask-questions input[type="tel"], 
+.ABN-Contactus .ask-questions input[type="message"] {
+  margin-left:0;
+  margin-right: 50px;
+  
+}
+
 .sendmail-box {
   width: 70%;
   margin-top: 200px;
@@ -675,6 +718,85 @@ input[type="tel"] {
   padding-top: 30px;
   }
 
+.ABN-Careers .container,
+.ABN-Contactus .container {
+  padding-left: 40px;
+  width: calc(50% - 40px);
+  padding-bottom: 40px;
+  align-items: baseline;
+  }
+
+  .ABN-Contactus .container {
+    align-items: center;
+    margin-bottom: 50px;
+
+  }
+
+  .single-container .container {
+    width: calc(100% - 40px);
+    margin: 0;
+    height: 441px;
+  }
+
+  .ABN-Job .single-container .container {
+    width: calc(100% - 40px);
+    margin: 0;
+    height: auto;
+  }
+
+
+
+
+  .ABN-Careers .container h3{
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  }
+
+  .ABN-Contactus .container p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .button-location {
+    display: inline-flex;
+    padding: 6px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 68px;
+    border: 1px solid #FFF;
+    background: #161825;
+    color: var(--Grey-70, #B3B3B3);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; 
+  }
+
+  .button-applynow{
+    display: inline-flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #FFF; 
+    text-align: center;
+    font-family: Inter;
+    font-size: 17.016px;
+    font-weight: 700;
+    line-height: 24px; /* 141.047% */
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+
+  }
+
+  .button-applynow a { 
+    color: #FFF;
+    text-decoration: none;
+  } 
 
 @media (max-width: 1440px) {
   .nav-wrapper div ul {
@@ -820,6 +942,17 @@ input[type="tel"] {
     display: block;
   }
 
+  .ABN-Careers .container {
+    width: 80%;
+    padding-left: 20px; 
+    padding-bottom: 40px;
+    align-items: baseline;
+    
+    }
+
+    .ABN-Careers  .row {
+      justify-content: left; /* Center the containers on small screens */
+    }
 
 
 }
@@ -1068,9 +1201,13 @@ input[type="tel"] {
     padding: 0px;
   }
 
-  .form-fields-container, 
+ 
   .contactus-row  { 
     margin-right:110px ;
+  }
+
+  .form-fields-container {
+    margin-right:10px;
   }
   
   .quote-container {
@@ -1112,4 +1249,18 @@ input[type="tel"] {
   .stat-item {
     transform: scale(0.8); /* Scale down the size */
   }
+
+  .ask-questions {
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+
+
 }
+
+
+
+
+
+
+ 
