@@ -656,6 +656,39 @@ input[type="message"]  {
 }
 
 
+.Job-description .decription p {
+  margin-bottom: 1em;
+  padding-left: 1.5em; 
+  position: relative; 
+  margin-right: 10px;
+}
+
+
+.Job-description .decription p::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 50%; /* Center the bullet vertically */
+  transform: translateY(-50%); /* Adjust vertical position */
+  font-size: 1em; /* Adjust the size of the bullet if needed */
+  color: inherit; 
+}
+
+.Job-description .container {
+  align-items: baseline;
+}
+.decription,
+.skills {
+  margin-right: 10%;
+  
+}
+
+.submit-resume  a{
+text-align: left;
+text-decoration: underline;
+color: white;
+}
+
 .ABN-About .container-wrapper1, .right-container,
 .ABN-About .container-wrapper2, .left-container  {
   z-index: 2; 
@@ -744,7 +777,20 @@ input[type="message"]  {
     height: auto;
   }
 
+  .job-info {
+    display: flex; 
+    justify-content: space-around; 
+  }
 
+  .job-info .container {
+    width: calc(25% - 40px);
+    margin: 0;
+    height: 120px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
 
 
   .ABN-Careers .container h3{
@@ -899,6 +945,10 @@ input[type="message"]  {
 }
 
 @media (max-width: 480px) {
+
+  .main-container{
+    padding-right: 0;
+  }
   .container {
     width: 100%;
 
@@ -953,6 +1003,18 @@ input[type="message"]  {
     .ABN-Careers  .row {
       justify-content: left; /* Center the containers on small screens */
     }
+
+    
+  .ABN-Job .single-container .container {
+    width: calc(100% - 40px);
+    margin: 0;
+    height: auto;
+  }
+
+  .decription,
+  .skills {
+    margin-right: 0;
+  }
 
 
 }
@@ -1254,6 +1316,17 @@ input[type="message"]  {
     margin-top: 100px;
     margin-bottom: 0;
   }
+
+  .job-info {
+    flex-wrap: wrap;
+  }
+
+  .job-info .container {
+    width: calc(50% - 40px);
+    height: auto;
+
+  }
+
 
 
 }
