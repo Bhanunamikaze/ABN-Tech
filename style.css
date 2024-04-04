@@ -343,6 +343,7 @@ section {
   margin: 0 1%;
 }
 
+
 .container {
   background: #161825;
   padding: 20px;
@@ -351,7 +352,17 @@ section {
   align-items: center; 
   width: calc(33.333% - 40px);
   margin-bottom: 20px;
-  }
+}
+
+.single-container {
+  padding: 20px;
+  background: #161825;
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 40px);
+  height: auto;
+
+}
   
   .image-placeholder {
   width: 224px; /* Set a fixed width for larger screens */
@@ -844,6 +855,109 @@ color: white;
     text-decoration: none;
   } 
 
+  
+.appdev {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  margin-top: 10px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.services-container {
+  flex: 1 1 60%;
+  max-width: calc(100% - 35%); 
+  padding: 20px;
+  background-color: transparent;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.services-img {
+  max-width: 35%;
+  max-height: 370px;
+  margin: 10px;
+  margin-bottom: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+}
+
+.services-img img {
+  width: 100%;
+  height: auto;
+}
+
+.methodologies .container {
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid #A1AEBF;
+  align-items: baseline;
+  text-align: left;
+  padding-bottom: 0;
+  margin-bottom: 0;
+
+}
+
+.methodologies h2,
+.our-process h2{
+  text-align: center;
+  line-height: 62px
+}
+
+.methodologies .container h3{
+  font-weight: 400;
+  line-height: 36px; 
+  padding: 0;
+  margin: 0;
+}
+
+.methodologies .container p,
+.our-process p{ 
+  color: rgba(255, 255, 255, 0.60);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.28px;
+
+}
+
+.our-process .container {
+  width: calc(50% - 40px);
+  align-items: center;
+  flex-direction: row;
+}
+
+.our-process h4{
+  color: var(--Absolute-White, #FFF);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 150%;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+
+}
+
+.number {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  padding: 10px;
+
+}
+
+.process-data {
+  padding-left: 20px;
+  padding-top: 0;
+}
+
+
 @media (max-width: 1440px) {
   .nav-wrapper div ul {
     gap: 75px;
@@ -1015,6 +1129,14 @@ color: white;
   .skills {
     margin-right: 0;
   }
+
+  .services-img {
+    display: none;
+  }
+  .services-container {
+    max-width: calc(100%); 
+  }
+  
 
 
 }
@@ -1301,7 +1423,9 @@ color: white;
     margin: 0; /* Adjust based on your design */
   }
 
-  .container {
+  .container,
+  .our-process .container,
+  .our-process .single-container  {
     width: 100%; /* Full width for mobile devices */
     margin-bottom: 20px; /* Keep consistent spacing */
     margin-left: 20px;
