@@ -62,6 +62,7 @@ h5 {
   line-height: 40px; 
   letter-spacing: 1px;
   text-transform: uppercase;
+  text-align: left;
 }
 
 p {
@@ -974,7 +975,7 @@ color: white;
   text-align: center;
   line-height: 62px
 }
-
+ 
 .methodologies .container h3{
   font-weight: 400;
   line-height: 36px; 
@@ -1197,28 +1198,34 @@ color: white;
   letter-spacing: 0.36px;
 }
 
-.ABN-Mobile .our-process .container {
+.ABN-Mobile .our-process .container,
+.ABN-Staffing .our-process .container {
   padding: 0 20px  0;
 }
 
-.ABN-Mobile .our-process .single-container {
+.ABN-Mobile .our-process .single-container,
+.ABN-Staffing .our-process .single-container {
   padding: 0 20px 0;
   width: calc(50% - 40px);
 
 }
 
-.ABN-Mobile .our-process .single-row {
+.ABN-Mobile .our-process .single-row,
+.ABN-Staffing  .our-process .single-row,
+.ABN-Contract  .our-process .single-row {
   display: block;
   margin-left: 30px;
 }
 
-.ABN-Mobile .contactus {
+.ABN-Mobile .contactus ,
+.ABN-Contract .contactus{
   height: auto;
   padding: 50px 0 ;
   
 }
 
-.ABN-Mobile .contactus p{
+.ABN-Mobile .contactus p,
+.ABN-Contract .contactus p{
   color: #FFFFFA;
   font-family: Inter;
   font-size: 16px;
@@ -1228,6 +1235,48 @@ color: white;
   letter-spacing: 1px;
   text-transform: capitalize;
   margin: 0 10%;
+}
+
+.ABN-Contract .contactus p{
+  margin: 3%;
+}
+
+.ABN-Staffing .whyus .container{
+ align-items: baseline;
+}
+
+.ABN-Mobile .our-process .container p, 
+.ABN-Mobile .our-process .single-container p, 
+.ABN-Staffing .our-process .single-container p, 
+.ABN-Staffing .our-process .container p {
+  color: var(--Absolute-White, #FFF);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 27px */
+}
+
+.ABN-Staffing .our-process h5,
+.ABN-Contract .contactus h5 {
+  padding: 0 30px;
+  text-transform: capitalize;
+
+}
+
+.ABN-Contract .contactus {
+  padding: 2%;
+}
+
+.ABN-Contract .our-process .container,
+.ABN-Contract .our-process .single-container{
+  flex-direction: column;
+
+}
+
+.ABN-Contract .our-process .single-container{ 
+  width:calc(50% - 40px)
+
 }
 
 @media (max-width: 1440px) {
@@ -1444,6 +1493,16 @@ color: white;
   h3{
     font-size: 15px; 
     line-height: 1.2; 
+  }
+
+  h5 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px; 
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+
   }
 
 
@@ -1710,7 +1769,6 @@ color: white;
  {
     width: 100%; /* Full width for mobile devices */
     margin-bottom: 20px; /* Keep consistent spacing */
-    margin-left: 20px;
     padding: 20px;
   }
 
@@ -1798,7 +1856,9 @@ color: white;
 
   }
 
-  .ABN-Mobile .our-process .single-container {
+  .ABN-Mobile .our-process .single-container,
+  .ABN-Staffing .our-process .single-container,
+  .ABN-Contract .our-process .single-container {
     width: 100%;
     margin: 0;
 
