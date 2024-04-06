@@ -65,6 +65,16 @@ h5 {
   text-align: left;
 }
 
+h6 {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
 p {
   color: #FFFFFA;
   font-family: Inter;
@@ -1204,20 +1214,29 @@ color: white;
 }
 
 .ABN-Mobile .our-process .single-container,
+.ABN-Permanent .our-approach .single-container,
 .ABN-Staffing .our-process .single-container {
   padding: 0 20px 0;
   width: calc(50% - 40px);
 
 }
 
+.single-row {
+  display: block;
+  margin-left: 30px;
+}
+
 .ABN-Mobile .our-process .single-row,
 .ABN-Staffing  .our-process .single-row,
+.ABN-Permanent  .our-approach .single-row,
 .ABN-Contract  .our-process .single-row {
   display: block;
   margin-left: 30px;
 }
 
 .ABN-Mobile .contactus ,
+.ABN-Permanent .contactus ,
+.ABN-TechnicalStaffing .contactus ,
 .ABN-Contract .contactus{
   height: auto;
   padding: 50px 0 ;
@@ -1237,18 +1256,42 @@ color: white;
   margin: 0 10%;
 }
 
+.ABN-TechnicalStaffing .contactus h5,
+.ABN-Permanent .contactus h5 {
+  margin: 0 10%;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.ABN-TechnicalStaffing .contactus p,
+.ABN-Permanent .contactus p {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  margin: 0 10%;
+  padding-bottom: 10px;
+}
+
 .ABN-Contract .contactus p{
   margin: 3%;
 }
 
-.ABN-Staffing .whyus .container{
+
+.ABN-Staffing .whyus .container,
+.ABN-Permanent .our-approach  .container{
  align-items: baseline;
 }
 
 .ABN-Mobile .our-process .container p, 
 .ABN-Mobile .our-process .single-container p, 
 .ABN-Staffing .our-process .single-container p, 
-.ABN-Staffing .our-process .container p {
+.ABN-Permanent .our-process .single-container p, 
+.ABN-Staffing .our-process .container p,
+.ABN-Permanent .our-process .container p {
   color: var(--Absolute-White, #FFF);
   font-family: Inter;
   font-size: 18px;
@@ -1258,6 +1301,7 @@ color: white;
 }
 
 .ABN-Staffing .our-process h5,
+.ABN-Permanent .our-approach h5,
 .ABN-Contract .contactus h5 {
   padding: 0 30px;
   text-transform: capitalize;
@@ -1268,15 +1312,128 @@ color: white;
   padding: 2%;
 }
 
+.ABN-ManagedServices .our-approach .single-container,
 .ABN-Contract .our-process .container,
-.ABN-Contract .our-process .single-container{
+.ABN-Permanent .our-approach .container,
+.ABN-Contract .our-process .single-container,
+.ABN-Permanent .our-approach .single-container {
   flex-direction: column;
+  width: calc(50% - 40px);
 
 }
 
-.ABN-Contract .our-process .single-container{ 
+.ABN-ManagedServices .our-approach .container,
+.ABN-TechnicalStaffing .our-approach .container,
+.ABN-Permanent .our-process .container,
+.ABN-Permanent .our-process .single-container {
+  width: calc(50% - 40px);
+}
+
+.ABN-ManagedServices .our-approach .single-container,
+.ABN-Contract .our-process .single-container, 
+.ABN-Permanent .our-approach .single-container{ 
   width:calc(50% - 40px)
 
+}
+
+.ABN-Permanent .our-approach .container p, 
+.ABN-Permanent .our-approach .single-container p {
+  padding-left: 20px;
+}
+
+.ABN-Permanent .our-process .container h5 {
+  margin: 0;
+}
+
+.ABN-TechnicalStaffing .our-approach h2,
+.ABN-Permanent .our-approach h2 {
+  text-align: center;
+}
+
+.ABN-TechnicalStaffing .our-approach h2 {
+  padding: 0 10%;
+}
+
+.ABN-TechnicalStaffing .our-approach p {
+  padding: 0 20px ;
+}
+
+.ABN-TechnicalStaffing .challenges .single-container {
+  flex-direction: column;
+  background: transparent;
+}
+.ABN-TechnicalStaffing .challenges .single-container h2 {
+  text-align: center;
+}
+
+
+
+.ABN-TechnicalStaffing .challenges .single-container p {
+  margin: 0 3%;
+  text-align: center;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  }
+
+.ABN-TechnicalStaffing .container-60 .single-container {
+  margin-left: 20%;
+}
+
+.ABN-TechnicalStaffing .container-60 .single-container p{
+  color: var(--Absolute-White, #FFF);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; 
+}
+
+.ABN-TechnicalStaffing .contactus h5, 
+.ABN-TechnicalStaffing .container-60 h5{
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: none;
+}
+
+.ABN-TechnicalStaffing .offer .services-container {
+  padding: 0;
+  margin-right: 10%;
+  margin-left: 0;
+  max-width: calc(100% - 55%);
+}
+
+.ABN-TechnicalStaffing .offer .image-wrapper svg {
+  left: -20%;
+}
+
+.ABN-TechnicalStaffing .offer {
+  padding-top: 0;
+}
+
+.ABN-TechnicalStaffing .what-we-offer h2{
+  text-align: right;
+  
+}
+
+.ABN-TechnicalStaffing .offer .single-container {
+  align-items: center;
+  padding: 0;
+}
+
+.ABN-ManagedServices .contactus {
+  align-items: baseline;
+}
+
+.ABN-ManagedServices .contactus h5,
+.ABN-ManagedServices .contactus p {
+  text-transform: none;
+  padding: 0 5%;
 }
 
 @media (max-width: 1440px) {
@@ -1836,15 +1993,23 @@ color: white;
 
   }
 
-  .whyus .small-container h4 {
+  .whyus .small-container h4,
+  .ABN-TechnicalStaffing .contactus h5,
+  .ABN-TechnicalStaffing .challenges .single-container p {
     text-align: left;
   }
 
   .offer,
-  .approach .row {
+  .approach .row ,
+  .our-approach .row  {
     flex-direction: column;
     padding-left: 0;
     margin-left: 0;
+  }
+
+  .our-approach .row,
+  .our-process .row {
+    margin-bottom: 20px;
   }
 
   .offer .services-container,
@@ -1856,12 +2021,54 @@ color: white;
 
   }
 
+  .ABN-ManagedServices .our-approach .single-container, 
+  .ABN-ManagedServices .our-approach .container, 
+  .ABN-TechnicalStaffing .our-approach .container, 
+  .ABN-Permanent .our-approach .container, 
+  .ABN-Permanent .our-process .container, 
+  .ABN-Permanent .our-process .single-container, 
   .ABN-Mobile .our-process .single-container,
   .ABN-Staffing .our-process .single-container,
-  .ABN-Contract .our-process .single-container {
+  .ABN-Contract .our-process .single-container,
+  .ABN-Permanent .our-approach .single-container {
     width: 100%;
     margin: 0;
+    align-items: baseline;      /* APPLIED THIS CHANGE TO REFLECT ON MOST OF THE PAGES*/
 
+  }
+
+  .ABN-ManagedServices .our-approach .single-row ,
+  .ABN-Permanent .our-approach .single-row,
+  .ABN-Permanent .our-process .single-row {
+    margin-left: 0;
+  }
+
+
+  .ABN-TechnicalStaffing .container-60 .single-container {
+    margin-left: 0;
+  }
+
+  .ABN-TechnicalStaffing .offer .single-container {
+    align-items: center;
+    padding: 0;
+  }
+
+  .ABN-TechnicalStaffing .offer .services-container {
+    max-width: calc(100%);
+  }
+  
+  .ABN-TechnicalStaffing .offer .image-wrapper svg {
+    display: none;
+  }
+  
+  .ABN-TechnicalStaffing .offer .row{
+    justify-content:flex-start;
+    width: auto;
+  }
+  
+  .ABN-TechnicalStaffing .what-we-offer h2{
+    text-align: left;
+    
   }
 
 
