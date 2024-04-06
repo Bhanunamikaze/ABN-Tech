@@ -53,6 +53,17 @@ h4 {
   line-height: 20px; 
 }
 
+h5 {
+  color: #FFFFFA;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; 
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 p {
   color: #FFFFFA;
   font-family: Inter;
@@ -62,6 +73,20 @@ p {
   line-height: 26px;
   text-align: left;
 }
+
+.container-40 .content  p,  
+.whyus .content  p {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  text-align: left;
+}
+
 
 .header {
   color: #ffffff;
@@ -102,12 +127,27 @@ p {
   display: block; /* Remove any extra space below the image */
 }
 
+.navbar .submenu {
+  display: none; 
+  padding: 10px;
+  margin: 10px;
+}
+
 
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 25px ;
+}
+
+.nav-wrapper input[type="checkbox"] {
+  display: none;
+}
+
+.navbar label:hover + input[type="checkbox"] + .submenu,
+.navbar .submenu:hover {
+  display: block; /* Display the submenu when label or submenu is hovered over */
 }
 
 .nav-wrapper div ul {
@@ -119,7 +159,7 @@ p {
   align-items: center;
 }
 
-.nav-wrapper div ul li a {  
+.nav-wrapper div ul li a  {  
   text-decoration: none;
   font-size: min(max(12px, calc(0.9rem + 0.5vw)), 24px); 
   position: relative;
@@ -129,6 +169,33 @@ p {
   color: #fffffa;
   white-space: nowrap;
 
+}
+
+.navbar label {
+  text-decoration: none;
+  font-size: min(max(12px, calc(0.9rem + 0.5vw)), 24px); 
+  position: relative;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer; 
+}
+
+.navbar .submenu {
+  position: absolute; /* Position submenus absolutely */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow */
+  z-index: 20;
+  display: none;
+  top: calc(40% + 10px); /* Align submenus below their parent items */
+
+}
+
+.navbar .submenu li {
+  padding: 10px;
+}
+
+.navbar .submenu li:hover {
+  background-color: transparent /* Change background color on hover */
 }
 
 .logo-link {
@@ -293,7 +360,7 @@ input[type="checkbox"]{
 .main-container {
   max-width: 100vw;
   margin: auto; /* Center the container */
-  padding: 0 30px;  
+  padding: 0;  
   width: 100%;
   margin-left: 0;
   box-sizing: border-box;
@@ -323,15 +390,14 @@ section {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 150px;
   width: 100%; 
   z-index: 1; 
-  max-width: 90%;
+  max-width: 100%;
   top: -100px;
 }
 
 .hero-vector object {
-  width: 120%;
+  width: 100%;
   height: auto;
 }
 
@@ -427,7 +493,7 @@ section {
   justify-content: center; /* Aligns vertically */
   align-items: center; /* Aligns horizontally */
   height: 515px; /* You can adjust or remove this if you want the section to grow with the content */
-  background-image: url('images/services.svg');
+  background-image: url('images/about.svg');
   background-size: cover;
   background-position: center;
   color: #FFFFFA;
@@ -856,7 +922,8 @@ color: white;
   } 
 
   
-.appdev {
+.appdev,
+.offer {
   display: flex;
   flex-wrap: wrap;
   padding-top: 50px;
@@ -874,7 +941,7 @@ color: white;
   border-radius: 5px;
 }
 
-.services-img {
+.img-block {
   max-width: 35%;
   max-height: 370px;
   margin: 10px;
@@ -885,12 +952,13 @@ color: white;
 
 }
 
-.services-img img {
+.img-block img {
   width: 100%;
   height: auto;
 }
 
-.methodologies .container {
+.methodologies .container,
+.approach .container {
   background: transparent;
   border-radius: 4px;
   border: 1px solid #A1AEBF;
@@ -958,6 +1026,210 @@ color: white;
 }
 
 
+.container-60,
+.container-40 {
+  display: flex;
+}
+
+.container-60 h2{
+  flex: 20%;
+  margin-right: 10%;
+}
+
+.container-60 .single-container{
+  flex: 1 1 60%;
+  width: 100%;
+  position: relative;
+  right: 0;
+  padding: 0 10px 0 ;
+  margin: 0;
+  align-items: center;
+} 
+
+.container-40 .single-container{
+  flex: 50%;
+  width: 60%;
+  position: relative;
+  right: 0;
+  padding: 0 10px 0 ;
+  margin: 0;
+  align-items: center;
+} 
+
+.container-40 .content{
+  flex: 40%;
+  padding-left: 20px;
+  margin-right: 10%;
+  padding-top: 0;
+}
+.container-40 h2 {
+  margin: 0;
+}
+
+
+.whyus .single-container {
+  display: block;
+  width: auto;
+  background: transparent;
+}
+
+.whyus h2{
+  text-align: center;
+}
+
+.whyus .single-container  .content  p {
+  text-align: center;
+  padding: 0 20px;
+  width: auto;
+}
+
+.whyus .single-container p {
+  text-align: left;
+  width: 85%;
+}
+
+.whyus .small-container {
+  display: block;
+  background: #161825;
+  width: 70%;
+  margin: 0 10%;
+  padding: 20px;
+}
+
+.whyus .small-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+  gap: 0;
+}
+
+.box {
+  border-radius: 4px;
+  border: 1px solid #A1AEBF;
+  margin-right: 10px;
+  width: calc(50% - 5px);
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+.single-box {
+  width: 50%;
+}
+
+.box:nth-child(even) {
+  margin-right: 0; 
+}
+
+.whyus .small-container h4 {
+  color: var(--Absolute-White, #FFF);
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px; 
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+
+
+.image-wrapper { 
+  position: relative; 
+}
+
+.image-wrapper svg {
+  position: absolute;
+  bottom: -20%;
+  right: -15%;
+  max-width: 80%; 
+
+}
+
+.offer{
+  position: relative;
+  margin-bottom: 10%;
+}
+
+.offer .img-block {
+  left: 0;
+  position: relative;
+  align-items: baseline;
+
+} 
+
+.offer .services-container {
+  flex: 1 1 40%;
+  padding: 20px;
+  background-color: transparent;
+  margin-right: 10%;
+  margin-left: 10%;
+  border-radius: 5px;
+}
+
+.offer .services-container p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.offer .services-container .opening-quote { 
+  height: 48px;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.approach .container {
+  width: calc(50% - 30px);
+}
+
+.approach h2 {
+  text-align: center;
+}
+
+.approach p {
+  color: rgba(255, 255, 255, 0.60);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.36px;
+}
+
+.ABN-Mobile .our-process .container {
+  padding: 0 20px  0;
+}
+
+.ABN-Mobile .our-process .single-container {
+  padding: 0 20px 0;
+  width: calc(50% - 40px);
+
+}
+
+.ABN-Mobile .our-process .single-row {
+  display: block;
+  margin-left: 30px;
+}
+
+.ABN-Mobile .contactus {
+  height: auto;
+  padding: 50px 0 ;
+  
+}
+
+.ABN-Mobile .contactus p{
+  color: #FFFFFA;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 218.75% */
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0 10%;
+}
+
 @media (max-width: 1440px) {
   .nav-wrapper div ul {
     gap: 75px;
@@ -980,11 +1252,12 @@ color: white;
 
 @media (max-width: 1200px) {
   .nav-wrapper div ul {
-    gap: 65px;
+    gap: 40px;
   }
   
-  .nav-wrapper div ul li a {  
-    font-size: min(max(12px, calc(0.9rem + 0.5vw)), 19px); 
+  .nav-wrapper div ul li a,
+  .navbar  label {  
+    font-size: min(max(12px, calc(0.9rem + 0.5vw)), 17px); 
   
   }
 
@@ -1005,11 +1278,12 @@ color: white;
 
 @media (max-width: 1024px) {
   .nav-wrapper div ul {
-    gap: 30px;
+    gap: 25px;
   }
   
-  .nav-wrapper div ul li a {  
-    font-size: min(max(12px, calc(0.9rem + 0.5vw)), 16px); 
+  .nav-wrapper div ul li a,
+  .navbar  label{  
+    font-size: min(max(12px, calc(0.9rem + 0.5vw)), 15px); 
   
   }
 
@@ -1062,6 +1336,10 @@ color: white;
 
   .main-container{
     padding-right: 0;
+  }
+
+  h1 {
+    font-size:40px ;
   }
   .container {
     width: 100%;
@@ -1130,7 +1408,7 @@ color: white;
     margin-right: 0;
   }
 
-  .services-img {
+  .img-block {
     display: none;
   }
   .services-container {
@@ -1155,8 +1433,19 @@ color: white;
   }
 
   h1 {
-    font-size: 35px;
+    font-size: 28px;
   }
+
+  h2 {
+    font-size: 20px; 
+    line-height: 1.2; 
+  }
+
+  h3{
+    font-size: 15px; 
+    line-height: 1.2; 
+  }
+
 
   .container {
     width: calc(50% - 40px);
@@ -1167,6 +1456,7 @@ color: white;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 30px;
   }
 
   .top-gradient {
@@ -1184,6 +1474,8 @@ color: white;
 
   .navbar{
     position: fixed;
+    display: flex;
+    flex-direction: column;
     top: 0;
     left: 0;
     height: 100%;
@@ -1208,12 +1500,14 @@ color: white;
     text-align: left;
     box-sizing: border-box;
   }
+
+
+ 
   .navbar ul li{
     margin: 15px 0;
   }
 
   .navbar ul li a{
-    padding: 5px 30px;
     line-height: 50px;
     transition: all 0.3s ease;
   }
@@ -1238,6 +1532,7 @@ color: white;
     padding: 20px 0; 
     z-index: 102; 
   }
+  
   
   .link{
     top:25px;
@@ -1267,10 +1562,10 @@ color: white;
   }
 
   .white-line {
-    width: 100%;
+    width: 80%;
     height: 2px;
     top: 100px;
-    left: 80px;   
+    left: 40px;   
     background-color: #fffffa24;
     
   }
@@ -1327,15 +1622,6 @@ color: white;
     height: auto; 
   }
 
-  h2 {
-    font-size: 20px; 
-    line-height: 1.2; 
-  }
-
-  h3{
-    font-size: 15px; 
-    line-height: 1.2; 
-  }
 
   .contactus   h2 {
     font-size: 18px; 
@@ -1418,14 +1704,10 @@ color: white;
     text-align: left;
   }
 
-
-  .row {
-    margin: 0; /* Adjust based on your design */
-  }
-
   .container,
   .our-process .container,
-  .our-process .single-container  {
+  .our-process .single-container 
+ {
     width: 100%; /* Full width for mobile devices */
     margin-bottom: 20px; /* Keep consistent spacing */
     margin-left: 20px;
@@ -1451,12 +1733,79 @@ color: white;
 
   }
 
+  .container-60{
+    display: block;
+  }
+  
+  .container-60 h2,
+  .container-40 h2,
+  .whyus h2,
+  .what-we-offer h2{
+    font-size: 25px;
+    text-align: left;
+    
+  }
+  
+  .container-60 .single-container {
+    width: 70%;
+    position: relative;
+    right: 0;
+    padding: 0 10px 0 ;
+    margin: 0;
+    align-items: center;
+  } 
+
+  .container-40 {
+    flex-direction: column-reverse;
+  }
+
+  .container-40 .content p {
+    font-size: 16px;
+  }
+
+  .whyus .small-container {
+    margin: 0;
+    width: auto;
+  }
+  .whyus .small-container .row{ 
+    display: block;
+    align-items: baseline;
+
+  }
+  .whyus .small-container .box{ 
+    display: flex;
+    width: 100%;
+
+  }
+
+  .whyus .small-container h4 {
+    text-align: left;
+  }
+
+  .offer,
+  .approach .row {
+    flex-direction: column;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .offer .services-container,
+  .approach .container  {
+    margin-left: 0;
+    margin-right: 0;
+    max-width:100%;
+    width: 100%;
+
+  }
+
+  .ABN-Mobile .our-process .single-container {
+    width: 100%;
+    margin: 0;
+
+  }
 
 
 }
-
-
-
 
 
 
