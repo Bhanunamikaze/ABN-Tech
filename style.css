@@ -14,7 +14,7 @@ h1 {
   font-size: 68px;
   font-style: normal;
   font-weight: 400;
-  line-height: 72px; /* 105.882% */
+  line-height: 72px;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: left;
@@ -26,7 +26,7 @@ h2 {
   font-size: 42px;
   font-style: normal;
   font-weight: 500;
-  line-height: 54px; /* 128.571% */
+  line-height: 54px;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: left;
@@ -102,16 +102,28 @@ p {
 .header {
   color: #ffffff;
   padding: 20px ;
+  right: 0;
   position: relative;
   background: transparent;
 }
 
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  margin-left: 1.5%;
+  width: 95%;
+  height: 2px;  
+  background-color: #fffffa24; 
+}
+
+
 .top-gradient {
   position: absolute;
-  top: -5%; /* Adjusted to account for body margin */
-  right: -8%; /* Adjusted to account for body margin */
+  top: -20%; /* Adjusted to account for body margin */
   height: 30px;
-  width: 100%;
+  width: 96%;
   z-index: 0;
 }
 
@@ -138,28 +150,23 @@ p {
   display: block; /* Remove any extra space below the image */
 }
 
-.navbar .submenu {
+.nav-wrapper .navbar .submenu ,
+.navbar .submenu-2 {
   display: none; 
-  padding: 10px;
-  margin: 10px;
 }
-
 
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 25px ;
+
 }
 
 .nav-wrapper input[type="checkbox"] {
   display: none;
 }
 
-.navbar label:hover + input[type="checkbox"] + .submenu,
-.navbar .submenu:hover {
-  display: block; /* Display the submenu when label or submenu is hovered over */
-}
 
 .nav-wrapper div ul {
   list-style: none;
@@ -170,56 +177,135 @@ p {
   align-items: center;
 }
 
-.nav-wrapper div ul li a  {  
+
+.nav-wrapper div ul li a,
+.navbar label,
+.services-label  {  
   text-decoration: none;
-  font-size: min(max(12px, calc(0.9rem + 0.5vw)), 24px); 
+  font-size: min(max(12px, calc(0.9rem + 0.5vw)), 16px); 
   position: relative;
   margin-top: -1px;
   font-family: "Inter", Helvetica;
   font-weight: 700;
   color: #fffffa;
   white-space: nowrap;
-
-}
-
-.navbar label {
-  text-decoration: none;
-  font-size: min(max(12px, calc(0.9rem + 0.5vw)), 24px); 
-  position: relative;
-  font-family: "Inter", Helvetica;
-  font-weight: 700;
-  white-space: nowrap;
   cursor: pointer; 
+  z-index: 22;
 }
 
-.navbar .submenu {
-  position: absolute; /* Position submenus absolutely */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow */
+
+
+.services-label {
+  background: linear-gradient(90deg, #33A8D4 0%, #FDE14D 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+
+}
+
+.services-label.underline::after {
+  background-color: white;
+}
+
+.nav-wrapper .submenu {
+  position: absolute;
+  top: -150%;
+  left: -5%;
+  right: 0;
+  width: 100vw;
   z-index: 20;
-  display: none;
-  top: calc(40% + 10px); /* Align submenus below their parent items */
+  background-color: black; 
+  display: flex;
+  justify-content: space-around; 
+  gap:0px;
+  padding-top: calc(5% + 150px);
+  padding-bottom: 10%;
+  padding-right: 4%;
+  overflow: hidden;
+}
+
+.nav-wrapper .submenu ul {
+  display: flex;
+  flex-direction: column; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: baseline;
+  gap:0;
+}
+
+.nav-wrapper .submenu .staffing {
+  color: #8B8B8B;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; 
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-wrapper .submenu > li {
+  display: flex;
+  flex-direction: row; 
 
 }
 
-.navbar .submenu li {
+.nav-wrapper  .submenu ul li {
+  margin-bottom: 5px; 
+}
+
+.nav-wrapper .submenu a {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal; 
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.nav-wrapper .submenu a:hover {
+  background: linear-gradient(90deg, #33A8D4 0%, #FDE14D 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-wrapper .navbar .services-menu:hover .submenu {
+  display: block;
+}
+
+.nav-wrapper  .navbar .submenu li {
   padding: 10px;
 }
 
-.navbar .submenu li:hover {
-  background-color: transparent /* Change background color on hover */
-}
+
 
 .logo-link {
   position: absolute;
   top: 0;
   top: 0;
   left: 55px;
+  
 }
 
 .logo {
   position: absolute;
   width: 117px;
   height: 35px;
+  z-index: 22;
 
 }
 
@@ -235,16 +321,9 @@ p {
   letter-spacing: 8.38px;
   line-height: 11.9px;
   white-space: nowrap;
+  z-index: 22;
 }
 
-.white-line {
-  position: absolute;
-  width: calc(100% - 40px); 
-  height: 2px;
-  top: 80px;
-  left: 0;   
-  background-color: #fffffa24;
-}
 
 .link {
   position: relative;
@@ -253,14 +332,16 @@ p {
   top: 9px;
   right: 15px;
   background-color: #e9792f;
+  z-index: 22;
 }
 
 .link-get-in-touch {
   bottom: 7px;
   background: linear-gradient(180deg, rgb(233, 121, 47) 0%, rgb(253, 225, 77) 100%);
-  -webkit-background-clip: text !important;
+  background-clip: text ;
   -webkit-text-fill-color: transparent;
   letter-spacing: 2px;
+  z-index: 22;
 }
 
 
@@ -440,13 +521,14 @@ section {
   height: auto;
 
 }
+
   
   .image-placeholder {
   width: 224px; /* Set a fixed width for larger screens */
   max-width: 100%; /* Ensures it doesn't exceed the container's width */
   height: 210px;
   background-color: #000;
-  margin-bottom: 20px;
+  margin: 20px;
   }
 
   .icon-placeholder{
@@ -845,6 +927,13 @@ color: white;
   width: calc(50% - 40px);
   padding-bottom: 40px;
   align-items: baseline;
+  }
+
+  .ABN-Contactus .offices .single-container .container,
+  .ABN-Contactus .offices .single-container  {
+    padding: 0;
+    margin: 0;
+    width: 100%;
   }
 
   .ABN-Contactus .container {
@@ -1441,14 +1530,10 @@ color: white;
     gap: 75px;
   }
   
-  .nav-wrapper div ul li a {  
-    font-size: min(max(12px, calc(0.9rem + 0.5vw)), 20px); 
-  
-  }
-
   .link {
     top: 11px;
   }
+
   .link-get-in-touch {
     bottom: 3px;
   }
@@ -1461,12 +1546,6 @@ color: white;
     gap: 40px;
   }
   
-  .nav-wrapper div ul li a,
-  .navbar  label {  
-    font-size: min(max(12px, calc(0.9rem + 0.5vw)), 17px); 
-  
-  }
-
   .link {
     top: 7px;
   }
@@ -1486,10 +1565,10 @@ color: white;
   .nav-wrapper div ul {
     gap: 25px;
   }
-  
+
   .nav-wrapper div ul li a,
   .navbar  label{  
-    font-size: min(max(12px, calc(0.9rem + 0.5vw)), 15px); 
+    font-size: min(max(12px, calc(0.9rem + 0.5vw)), 14px); 
   
   }
 
@@ -1633,6 +1712,9 @@ color: white;
     margin: 0;
   }
 
+  .header {
+    padding: 20px 20px 40px;
+  }
 
   main {
     flex: 1; 
@@ -1651,6 +1733,13 @@ color: white;
     font-size: 15px; 
     line-height: 1.2; 
   }
+
+  h4{
+    font-size: 18px; 
+    line-height: 1.5; 
+    text-align: left;
+  }
+
 
   h5 {
     font-size: 18px;
@@ -1777,14 +1866,6 @@ color: white;
     white-space: nowrap;
   }
 
-  .white-line {
-    width: 80%;
-    height: 2px;
-    top: 100px;
-    left: 40px;   
-    background-color: #fffffa24;
-    
-  }
 
   .footer-container {
     display: block; 
@@ -1833,6 +1914,17 @@ color: white;
     top: -100px;
   }
 
+  .ABN-Contactus .container {
+    align-items: baseline;
+    width: 100%;
+  }
+
+  .ABN-Contactus .row {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 100%;
+  }
 .contactus {
     padding: 100px 10px 100px;; 
     height: auto; 
