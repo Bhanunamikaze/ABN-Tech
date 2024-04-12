@@ -6,6 +6,7 @@
 <title>ABN Tech</title>
 <link rel="stylesheet" href="globals.css" />
 <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
   <!-- <div class="services-gradient"><img src="images/services.svg" alt="Services Gradient"></div>
@@ -15,9 +16,6 @@
     
       <header class="header">
         <nav class="nav-wrapper">
-          <input type="checkbox" id="active">
-          <label for="active" class="menu-icon">☰</label>
-    
           <div>
             <a href="index.html" class="logo-link">
               <img class="logo" src="images/logo.png" alt="Tech Corp Logo" />
@@ -33,15 +31,15 @@
                         <ul class="submenu" id="servicesSubmenu">
         
                                 <ul>
-                                    <li class=""><a href="app-development.html">Application Development</a></li>
+                                    <li><a href="app-development.html">Application Development</a></li>
                                     <li><a href="data-engineering-data-analytics.html">Data engineering and Data analytics</a></li>
                                     <li><a href="infrastructure.html">Infrastructure & services</a></li>
                                     <li><a href="mobile-appdev.html">Mobile app development</a></li>
                                 </ul>
                                   
                                 <ul>
-                                    <li class="staffing">STAFFING</li>
-                                    <li><a href="staffing.html">Temporary Staffing Services</a></li>
+                                    <li><a href="staffing.html">Staffing</a></li>
+                                    <li><a href="temperory-staffing.html">Temporary Staffing Services</a></li>
                                     <li><a href="contract-to-hire.html">Contract to Hire Staffing Solutions</a></li>
                                     <li><a href="permanent-staffing.html">Permanent Staffing Services</a></li>
                                 </ul>
@@ -51,22 +49,79 @@
                                     <li><a href="technical-industrial-staffing.html">Technical & Industrial Staffing Services</a></li>
                                     <li><a href="managed-services.html">Managed Services Overview</a></li>
                                     <li></li>
+                                </ul>
+                          </ul>
                     </div>
                 </li>
-                <li>
-                    <label for="toggle-products" tabindex="0">PRODUCTS +</label>
-                    <input type="checkbox" id="toggle-products">
-                    <ul class="submenu-2">
-                        <li><a href="#">Product 1</a></li>
-                        <li><a href="#">Product 2</a></li>
-                    </ul>
-                </li>
+                <li class="products-menu">
+                  <div class="nav-container"> <!-- -->
+                      <div class="products-label" onmouseover="showSubmenu()" onmouseout="hideSubmenu()"> PRODUCTS +</div>
+                      <ul class="submenu" id="productsSubmenu">
+                        <a href="https://cloudscore.ai/"><li>
+                              <div class="nav-sm-container"> 
+                                <img src="images/cloudscore_ai.png" alt="cloudscore.ai">
+                                <p>Cloudscore.ai</p>
+                              </div></li> </a>
+                        <a href="https://lazysmm.com/"><li>
+                          <div class="nav-sm-container"> 
+                            <img src="images/cloudscore_ai.png" alt="lazysmm.com">
+                            <p>lazysmm.com</p>
+                          </div></li> </a>
+
+                        <a href="#"><li>
+                          <div class="nav-sm-container agri-img"> 
+                            <img src="images/Agri-Locate.png" alt="agrilocate.com">
+                            <p>agrilocate.com</p>
+                          </div></li><p> Coming Soon...</p></a>
+                        </ul>
+                  </div>
+              </li>
                 <li><a href="careers.html">CAREERS</a></li>
                 <li><div class="link"></div><a class="link-get-in-touch" href="contact-us.html ">GET IN TOUCH</a></li>
             </ul>
         </div>
-        
-          
+      </nav>
+
+      <input type="checkbox" id="active">
+      <label for="active" class="menu-icon"></label>
+      <div class="overlay"></div>
+      <nav class="mobile-nav">
+        <div class="logo-link">
+          <div class="item">
+            <a href="index.html">
+              <img class="mobile-logo" src="images/logo.png" alt="Tech Corp Logo" />
+            </a>
+            <div class="mobile-tech-corp">Tech Corp</div>
+          </div>
+        </div>
+        <div class="navbar">
+          <div class="sidenav">
+            <a href="about.html">ABOUT</a>
+            <div class="dropdown-btn">SERVICES + </div>
+            <div class="dropdown-container">
+              <div class="white-line"></div>
+              <a href="app-development.html">Application Development</a>
+              <a href="data-engineering-data-analytics.html">Data engineering and Data analytics</a>
+              <a href="infrastructure.html">Infrastructure & services</a>
+              <a href="mobile-appdev.html">Mobile app development</a>
+              <h4>STAFFING</h4>
+              <a href="temperory-staffing.html">Temporary Staffing Services</a>
+              <a href="contract-to-hire.html">Contract to Hire Staffing Solutions</a>
+              <a href="permanent-staffing.html">Permanent Staffing Services</a>
+              <a href="technical-industrial-staffing.html">Technical & Industrial Staffing Services</a>
+              <a href="managed-services.html">Managed Services Overview</a>
+            </div>
+            <div class="dropdown-btn">PRODUCTS +</div>
+            <div class="dropdown-container">
+              <div class="white-line"></div>
+              <a href="https://cloudscore.ai/">Cloudscore.ai</a>
+              <a href="https://lazysmm.com/">Lazysmm.com</a>
+              <a href="https://cloudscore.ai/">Agrilocate.com(Coming Soon...)</a>
+            </div>
+            <a href="careers.html">CAREERS</a>
+            <a class="link-get-in-touch" href="contact-us.html ">GET IN TOUCH</a>
+          </div>
+         </div>
       </nav>
 
       </header>
@@ -313,30 +368,8 @@
       
     </div>
 
-    <script>
-    function showSubmenu() {
-        console.log("showSubmenu called");
-        var submenu = document.getElementById("servicesSubmenu");
-        submenu.style.display = "flex";
-        var servicesLabel = document.querySelector(".services-label");
-        servicesLabel.classList.add("underline"); // Add underline class
-    }
 
-    function hideSubmenu() {
-        console.log("hideSubmenu called");
-        var submenu = document.getElementById("servicesSubmenu");
-        submenu.addEventListener("mouseout", function(event) {
-            console.log("mouseout event detected");
-            if (!submenu.contains(event.relatedTarget)) {
-                submenu.style.display = "none";
-                var servicesLabel = document.querySelector(".services-label");
-                servicesLabel.classList.remove("underline"); // Remove underline class
-            }
-        });
-    }
-
-    </script>
-    
+  <script src="script.js"></script>
 </body>
 
 </html>
