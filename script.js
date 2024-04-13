@@ -68,3 +68,10 @@ document.getElementById("productsSubmenu").addEventListener("mouseout", hideSubm
       }
 });
 }
+
+const slider = document.querySelector('.slider');
+const images = slider.querySelectorAll('img');
+const imageWidth = images[0].offsetWidth + 12; // Image width + gap
+
+const totalSliderWidth = images.length * imageWidth;
+slider.style.width = `${totalSliderWidth}px`;

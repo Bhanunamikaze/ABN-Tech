@@ -128,26 +128,34 @@ p {
 }
 
 .bottom-gradient {
+  width: 1146px;
+  height: 1182px;
   position: absolute;
-  top: 185vw;
-  left: 0; 
-  z-index: 2; 
-  height: 70%;
-  width: 100%;
+  margin: 0 !important;
+  bottom: 0px;
+  left: -7%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+  z-index: -1;
 }
 
+
 .services-gradient {
-  position: absolute; /* Absolutely position the SVG */
-  height: auto;
-  top: 42%;
-  left: 0; /* Align to the left of the section */
-  z-index: 0; /* Position it behind the content */
+  position: absolute; 
+  overflow: hidden;
+  top: 20%; 
+  left: -7%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .services-gradient, .bottom-gradient, .top-gradient   img {
   width: 100%;
-  height: auto; /* Keep the aspect ratio of the SVG */
-  display: block; /* Remove any extra space below the image */
+  height: auto; 
+  display: block;
+  pointer-events: none;
+
 }
 
 .mobile-nav {
@@ -203,6 +211,7 @@ p {
   background-clip: text;
   -webkit-background-clip: text ;
   -webkit-text-fill-color: transparent ;
+  font-weight: 800;
 }
 
 
@@ -301,6 +310,7 @@ p {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 500;
 }
 
 
@@ -391,6 +401,7 @@ p {
   color: transparent;
   background-color: transparent;
   z-index: 2; 
+  position: relative;  /* Added for gradient */
 }
 
 .footer-main {
@@ -398,6 +409,21 @@ p {
   justify-content: space-between;
   padding: 20px;
 }
+
+ /* Use a pseudo-element to hold the gradient
+.footer-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px; 
+  height: 150px; 
+  background-image: url('images/bottom-gradient.svg');
+  background-size: cover;
+  z-index: -1;  
+}
+
+*/
 
 .footer-section {
   flex: 1; 
@@ -545,7 +571,7 @@ section {
 }
 
   
-  .image-placeholder {
+.image-placeholder {
   width: 224px; /* Set a fixed width for larger screens */
   max-width: 100%; /* Ensures it doesn't exceed the container's width */
   height: 210px;
@@ -572,31 +598,56 @@ section {
 .slider-wrapper {
   width: 100%; /* Set width to 100% of the parent container */
   margin: 50px 0 ; /* Reset any margins */
-  display: flex; /* Use flexbox to center content horizontally */
-  justify-content: center; /* Center flex items on the main axis */
+  justify-content: center; 
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Slider */
 .slider {
   display: flex; /* Displays images in a row */
   animation: scrollSlider 30s linear infinite; /* Adjust time as per the requirement */
-  gap: 60px; /* Space between images */
+  gap: 12px;
+  margin: 10px 0;
 }
 
 .slider img {
-  width: 116px; /* Image width */
-  height: 100px; /* Image height */
-  object-fit: cover; /* Ensures images cover the area without stretching */
+  display: inline-flex;
+  width: 100%;
+  object-fit: cover; 
 }
 
 /* Slider Animation */
 @keyframes scrollSlider {
   0% {
-    transform: translateX(100%); /* Start offscreen to the right */
+    transform: translateX(0); /* Start offscreen to the right */
   }
   100% {
     transform: translateX(-100%); /* End offscreen to the left */
   }
+}
+
+.data-text {
+  margin: 0 2%;
+  padding-top: 100px;
+
+}
+
+.data-text p {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+
+}
+.small-block {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.00);
+  box-shadow: 0px 0px 0px 20px #FFFFFA inset;
+  display: inline-block;
+  vertical-align: middle;
+
 }
 
 .contactus {
@@ -649,7 +700,7 @@ section {
   flex-direction: column;
   justify-content: center; 
   align-items: center; 
-  height: 515px; 
+  height: 565px; 
   width: 100%;
   padding: 50px 20px;
   text-align: center;
@@ -687,7 +738,7 @@ section {
   height: 100%; 
   left: 0; 
   background:rgba(45, 50, 85, 0.08);
-  transform: translateX(-30%); 
+  transform: translateX(-20%); 
   z-index: -1; 
 }
 
@@ -696,11 +747,31 @@ section {
   z-index: 2;
   right: 0;
   background-color: #020412;
-  width: 60%; 
+  width: 50%; 
   padding: 20px 50px;
 
-
 }
+
+.left-container .img-block {
+  max-width: 55%;
+  max-height: 400px;
+  height: auto;
+  right: 13%;
+  bottom: calc(24%);
+}
+
+.right-container .img-block {
+  max-width: 40%;
+  max-height: 400px;
+  height: auto;
+  left: 22%;
+  bottom: 0;
+}
+
+.right-container .img-block img {
+  max-width: 500px;
+}
+
 
 
 .arrow-divider {
@@ -876,7 +947,7 @@ color: white;
 
 .ABN-About .container-wrapper1, .right-container,
 .ABN-About .container-wrapper2, .left-container  {
-  z-index: 2; 
+  z-index: 10; 
 }
 
 .ABN-About .container {
@@ -1256,9 +1327,10 @@ color: white;
 
 .image-wrapper svg {
   position: absolute;
-  bottom: -20%;
-  right: -15%;
-  max-width: 80%; 
+  bottom: -22%;
+  right: -5%;
+  max-width: 50%; 
+  height: auto;
 
 }
 
@@ -1514,7 +1586,8 @@ color: white;
 }
 
 .ABN-TechnicalStaffing .offer .image-wrapper svg {
-  left: -20%;
+  left: -30%;
+  bottom: -29%;
 }
 
 .ABN-TechnicalStaffing .offer {
@@ -1552,11 +1625,25 @@ color: white;
 }
 
 
-
-
 .ABN-Staffing .staffing  {
   margin-top: 30px;
 }
+
+
+.ABN-Staffing .staffing  a {
+  text-decoration: none;
+  color: #FFFFFA;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  margin-top: 15px;
+
+}
+
+
+
+
 
 @media (max-width: 1440px) {
   .nav-wrapper div ul {
@@ -1569,6 +1656,10 @@ color: white;
 
   .link-get-in-touch {
     bottom: 3px;
+  }
+
+  .left-container .img-block {
+    bottom: 6%;
   }
 
   
@@ -1587,14 +1678,20 @@ color: white;
     bottom: 3px;
   }
 
-  .ABN-About .container-wrapper1 {
-    margin-top: 100px;
-  }
 
+  .left-container .img-block {
+    bottom: 0;
+  }
+  
+  
 
 }
 
 @media (max-width: 1024px) {
+
+  h2 {
+    font-size: 35px;
+  }
   .nav-wrapper div ul {
     gap: 25px;
   }
@@ -1622,10 +1719,6 @@ color: white;
     height: 1015px; 
     padding: 20px 20px;
 
-  }
-
-  .ABN-About .container-wrapper1 {
-    margin-top: 180px;
   }
 
   .contactus-form {
@@ -1740,7 +1833,9 @@ color: white;
     display: none;
   }
   
-  .navbar li,ul,label {
+  .navbar li,
+  .navbar ul,
+  .navbar label {
     display: none;
   }
 
@@ -2042,13 +2137,8 @@ color: white;
     margin: 0;
 
   }
-  
-  .right-container, .left-container  {
-    display: none;
-  }
-  
 
-
+  
   .textr-container, 
   .textl-container  {
     position: relative; /* Change position to relative for better control on mobile */
@@ -2238,8 +2328,12 @@ color: white;
   }
   
   .ABN-TechnicalStaffing .offer .image-wrapper svg {
-    display: none;
+    right: -20%;
+    bottom: -27%;
+    left: unset;
+    width: calc(100% - 50%);
   }
+
   
   .ABN-TechnicalStaffing .offer .row{
     justify-content:flex-start;
@@ -2255,8 +2349,49 @@ color: white;
     width: calc(50% - 40px);
   }
 
-}
+  .appdev .img-block{
+    position: unset;
+    max-width: 65%;
+  }
 
+  .appdev .services-container {
+    max-width: 100%;
+  }
+
+  .container-wrapper1,
+  .container-wrapper2 {
+    display: flex;
+    height: auto;
+    flex-direction: column-reverse;
+    align-items: baseline;
+  }
+
+  .right-container,
+  .left-container {
+    position: static;
+    transform: translateX(0); 
+    width: 100%;
+    height: calc(250px);
+    margin-top: 25px;
+ 
+  }
+
+  .right-container .img-block,
+  .left-container .img-block  {
+    max-width: 50%;
+    left: 0;
+  }
+
+  .left-container {
+    margin-top: 60px;
+    left:0;
+    position: relative;
+    display: flex;
+    align-items: baseline;
+  }
+
+  
+}
 
 
  
@@ -2266,9 +2401,7 @@ color: white;
     padding-right: 0;
   }
 
-  h1 {
-    font-size:40px ;
-  }
+
   .container {
     width: 100%;
 
@@ -2302,13 +2435,13 @@ color: white;
   }
 
   .textl-container {
-    width: 80%; 
+    width: 100%; 
     margin-right: 70px;
     
   }
 
   .textr-container {
-    width: 80%; 
+    width: 100%; 
     display: block;
   }
 
@@ -2336,9 +2469,7 @@ color: white;
     margin-right: 0;
   }
 
-  .img-block {
-    display: none;
-  }
+
   .services-container {
     max-width: calc(100%); 
   }
@@ -2350,6 +2481,13 @@ color: white;
   .ABN-Staffing .staffing .row {
     display: block;
     width: 100%;
+  }
+
+  .right-container,
+  .left-container {
+    height: calc(180px);
+    margin-top: 5px;
+ 
   }
 
 
