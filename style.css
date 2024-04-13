@@ -85,6 +85,10 @@ p {
   text-align: left;
 }
 
+section {
+  z-index: 0;
+}
+
 .container-40 .content  p,  
 .whyus .content  p {
   color: #FFF;
@@ -144,7 +148,7 @@ p {
 .services-gradient {
   position: absolute; 
   overflow: hidden;
-  top: 20%; 
+  top: 18%; 
   left: -7%;
   object-fit: cover;
   z-index: -1;
@@ -156,6 +160,19 @@ p {
   display: block;
   pointer-events: none;
 
+}
+
+.ABN-Job .services-gradient {
+  top: -7%;
+}
+
+.ABN-appdev .services-gradient {
+  top: -9%;
+}
+
+.ABN-Staffing .services-gradient {
+  top: 38%;
+  left: -7%;
 }
 
 .mobile-nav {
@@ -572,17 +589,29 @@ section {
 
   
 .image-placeholder {
-  width: 224px; /* Set a fixed width for larger screens */
-  max-width: 100%; /* Ensures it doesn't exceed the container's width */
-  height: 210px;
-  background-color: #000;
+  max-width: 224px; 
+  width: 100%; 
+  max-height: 210px;
+  height: auto;
   margin: 20px;
   }
 
-  .icon-placeholder{
-    width: 72px;
-    height: 72px;
-  }
+.image-placeholder img {
+  max-width: 100%; 
+  height: auto;
+  object-fit: cover; 
+}
+
+.text-services {
+  text-align: left;
+  padding-left: 15px;
+}
+
+
+.icon-placeholder{
+  width: 72px;
+  height: 72px;
+}
 
 /* Slider Container */
 .slider-container {
@@ -888,7 +917,10 @@ input[type="message"]  {
 
 }
 
-
+.ABN-Contactus .ask-questions .quote-container {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 
 .ABN-About .container-wrapper1 p,
 .ABN-About .container-wrapper2 p {
@@ -1022,6 +1054,26 @@ color: white;
     width: 100%;
   }
 
+  .ABN-Contactus .offices .single-container .container{
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .ABN-Contactus .offices .single-container .container::before{
+    border-radius: 10px;
+  }
+
+  .ABN-Contactus .offices .row .container {
+    width: calc(50% - 10px);
+    border: 1px solid #A1AEBF;
+    background: #161825;
+  }
+
+  .ABN-Contactus .offices .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
   .ABN-Contactus .container {
     align-items: center;
     margin-bottom: 50px;
@@ -1683,6 +1735,10 @@ color: white;
     bottom: 0;
   }
   
+  .image-wrapper svg {
+    bottom: -25%;
+    right: -8%;
+  }
   
 
 }
@@ -1749,6 +1805,10 @@ color: white;
     left: 25px;
   }
 
+  .image-wrapper svg {
+    bottom: -30%;
+    right: -11%;
+  }
   
 }
 
@@ -2207,6 +2267,11 @@ color: white;
     margin-bottom: 0;
   }
 
+  
+.ABN-Contactus .ask-questions .quote-container {
+  margin-bottom: 50px;
+}
+
   .job-info {
     flex-wrap: wrap;
   }
@@ -2390,13 +2455,35 @@ color: white;
     align-items: baseline;
   }
 
+  .ABN-Contactus .offices .row .container {
+    width: 100%;
+  }
+
+  .ABN-Contract .services-gradient {
+    top: 35%;
+    left: -16%;
+  }
   
+  .ABN-TechnicalStaffing .services-gradient {
+    top: 39%;
+    left: 0%;
+  }
+
+  .ABN-ManagedServices .services-gradient {
+    top: 39%;
+    left: 0%;
+  }
+
 }
 
 
  
 @media (max-width: 480px) {
 
+
+  h5 {
+    font-size: 14px;
+  }
   .main-container{
     padding-right: 0;
   }
@@ -2490,6 +2577,9 @@ color: white;
  
   }
 
+  .services-gradient {
+    left: 0;
+  }
 
 
 }
