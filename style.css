@@ -1181,7 +1181,7 @@ color: white;
 
 .img-block {
   max-width: 35%;
-  max-height: 370px;
+  max-height: 310px;
   margin: 10px;
   margin-bottom: 30px;
   position: absolute;
@@ -2416,7 +2416,7 @@ color: white;
 
   .appdev .img-block{
     position: unset;
-    max-width: 65%;
+    max-width: 50%;
   }
 
   .appdev .services-container {
