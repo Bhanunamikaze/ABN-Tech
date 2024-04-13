@@ -69,9 +69,29 @@ document.getElementById("productsSubmenu").addEventListener("mouseout", hideSubm
 });
 }
 
+
+// JS for Slider 
 const slider = document.querySelector('.slider');
 const images = slider.querySelectorAll('img');
 const imageWidth = images[0].offsetWidth + 12; // Image width + gap
 
 const totalSliderWidth = images.length * imageWidth;
 slider.style.width = `${totalSliderWidth}px`;
+
+
+// JS for Hover Effect for get-in-touch 
+const linkDiv = document.querySelector('.link');
+const getInTouchLink = document.querySelector('.link-get-in-touch');
+
+getInTouchLink.addEventListener('mouseover', () => {
+    linkDiv.style.backgroundColor = 'white';
+    linkDiv.classList.add('hover-effect');
+    getInTouchLink.classList.add('hover-effect');
+});
+
+getInTouchLink.addEventListener('mouseout', () => {
+    linkDiv.classList.remove('hover-effect');
+    getInTouchLink.classList.remove('hover-effect');
+    linkDiv.style.backgroundColor = '#e9792f';
+});
+

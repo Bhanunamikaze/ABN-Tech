@@ -170,6 +170,11 @@ section {
   top: -9%;
 }
 
+.ABN-appdev .methodologies .services-gradient {
+  top: 20%;
+}
+
+
 .ABN-Staffing .services-gradient {
   top: 38%;
   left: -7%;
@@ -223,7 +228,23 @@ section {
   z-index: 22;
 }
 
-.label-gradient {
+
+
+/* Gradient For Navigation bar - On-Page effect */
+.label-gradient,
+.navbar ul li a:hover,
+.staffing-page .navbar ul li a[href="staffing.html"],
+.appdev-page .navbar ul li a[href="app-development.html"],
+.dataengg-page .navbar ul li a[href="data-engineering-data-analytics.html"],
+.ABN-Infra .navbar ul li a[href="infrastructure.html"],
+.ABN-Mobile .navbar ul li a[href="mobile-appdev.html"],
+.tempstaffing-page .navbar ul li a[href="temperory-staffing.html"],
+.ABN-Contract .navbar ul li a[href="contract-to-hire.html"],
+.ABN-Permanent .navbar ul li a[href="permanent-staffing.html"],
+.ABN-TechnicalStaffing .navbar ul li a[href="technical-industrial-staffing.html"],
+.ABN-ManagedServices .navbar ul li a[href="managed-services.html"],
+.about-page .navbar ul li a[href="about.html"],
+.careers-page .navbar ul li a[href="careers.html"] {
   background: linear-gradient(90deg, #33A8D4 0%, #FDE14D 100%);
   background-clip: text;
   -webkit-background-clip: text ;
@@ -231,8 +252,12 @@ section {
   font-weight: 800;
 }
 
-
-.underline::after {
+/* UNDERLINE For Navigation bar - On-Page effect */
+.underline::after,
+.contactus-page .link-get-in-touch::after,
+.about-page .navbar ul li a[href="about.html"]::after,
+.contactus-page .navbar ul li a[href="contact-us.html"]::after,
+.careers-page .navbar ul li a[href="careers.html"]::after {
   content: '';
   position: absolute;
   bottom: -25px;
@@ -241,6 +266,17 @@ section {
   display: block;
   border-bottom: 2px solid white;
 }
+
+.hover-effect,
+.navbar ul li a.link-get-in-touch:hover{
+  background: white;
+  background-color: white;
+  background-clip: text;
+  -webkit-background-clip: text ;
+  -webkit-text-fill-color: transparent ;
+}
+
+
 
 .nav-wrapper .submenu {
   position: absolute;
@@ -318,8 +354,10 @@ section {
 }
 
 .nav-wrapper .products-menu .submenu a:hover {
-  background-color: #fffffa24;
-  z-index: 20;
+  background-color: #fffffa24 ;
+  background-clip: unset;
+  -webkit-background-clip: unset ;
+  -webkit-text-fill-color: unset ;
 }
 
 .nav-wrapper .services-menu .submenu a:hover {
@@ -413,6 +451,7 @@ section {
   border-bottom-style: solid;
   border-color: #fffffa24;
 }
+
 .footer-container {
   font-family: "Inter", Helvetica;
   color: transparent;
@@ -427,20 +466,16 @@ section {
   padding: 20px;
 }
 
- /* Use a pseudo-element to hold the gradient
-.footer-container::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 200px; 
-  height: 150px; 
-  background-image: url('images/bottom-gradient.svg');
-  background-size: cover;
-  z-index: -1;  
+.footer-container a {
+  text-decoration: none;
+  color: #FFFFFA;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+
 }
 
-*/
 
 .footer-section {
   flex: 1; 
@@ -450,7 +485,7 @@ section {
 }
 
 .footer-section:last-child {
-  margin-right: 0; /* No margin for the last section */
+  margin-right: 0;
 }
 
 .footer-section h3 {
@@ -468,7 +503,7 @@ section {
 .footer-section p,
 .footer-section ul,
 .footer-section li {
-  line-height: 2; /* Spacing between lines */
+  line-height: 2; 
 }
 
 .footer-section ul {
@@ -477,12 +512,23 @@ section {
 }
 
 .footer-section li:not(:last-child) {
-  margin-bottom: 5px; /* Spacing between list items */
+  margin-bottom: 5px; 
 }
 
 .footer-section .footer-logo {
-  text-align: right; /* Aligns logo to the right */
+  text-align: right; 
+  
 }
+
+.footer-logo img {
+  border-radius: 10px;
+  background: #F3F3F3;
+  display: flex;
+  width: 210px;
+  padding: 10px 21.5px 18px 21.5px;
+  justify-content: center;
+  align-items: center;
+  }
 
 .footer-bottom {
   display: flex;
@@ -1434,6 +1480,17 @@ color: white;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.36px;
+}
+
+.ABN-Staffing .staffing .row .container:hover{
+  background: #23263A;
+}
+
+.ABN-Staffing .staffing .row .container a:hover{
+  background: linear-gradient(90deg, #33A8D4 0%, #FDE14D 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .ABN-Mobile .our-process .container,
