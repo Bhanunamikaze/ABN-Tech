@@ -19,6 +19,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Highlight effect for Submenu Items
+const submenuPages = [
+  "app-development.html", 
+  "data-engineering-data-analytics.html", 
+  "infrastructure.html",
+  "mobile-appdev.html",
+  "staffing.html",
+  "temperory-staffing.html",
+  "contract-to-hire.html",
+  "permanent-staffing.html",
+  "technical-industrial-staffing.html",
+  "managed-services.html"
+];
+
+// Check if the current page is a submenu page
+const currentPage = window.location.pathname.split("/").pop();
+if (submenuPages.includes(currentPage)) {
+  document.querySelector(".services-label").classList.add("active", "underline"); 
+}
+
+
 
 // Navigation bar Desktop Submenu
 function showSubmenu(element) {

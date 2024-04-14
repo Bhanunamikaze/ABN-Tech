@@ -233,6 +233,7 @@ section {
 
 
 /* Gradient For Navigation bar - On-Page effect */
+.services-label.active,
 .label-gradient,
 .footer-container a:hover,
 .navbar ul li a:hover,
@@ -256,6 +257,7 @@ section {
 }
 
 /* UNDERLINE For Navigation bar - On-Page effect */
+.services-label.active.underline::after,
 .underline::after,
 .contactus-page .link-get-in-touch::after,
 .about-page .navbar ul li a[href="about.html"]::after,
