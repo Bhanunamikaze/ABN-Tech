@@ -2624,7 +2624,7 @@ color: white;
 
   .ABN-Contract .services-gradient {
     top: 35%;
-    left: -16%;
+    left: -5%;
   }
   
   .ABN-TechnicalStaffing .services-gradient {
@@ -2829,11 +2829,26 @@ color: white;
     
   }
 
+  .quote-container {
+    padding-left: 3px;
+    padding-right: 0;
+  }
+
+  .Job-description .single-container {
+    width: 100%;
+  }
+
+  
+  .whyus h5, h5, .ABN-Contract .contactus h5,
+  .img-block, .offer .img-block,
+  .single-container, .whyus .single-container, .small-container, .whyus .small-container,
+  .services-container, .offer  .services-container, 
+  .container-40 .content,
+  .appdev .services-container,
   .stats-container,
   .footer-bottom,
   .footer-main,
   .footer-container,
-  .quote-container,
   .textl-container,
   .textr-container,
   .contactus-form,
@@ -2844,6 +2859,11 @@ color: white;
     padding-right: 0;
   }
 
+  .whyus h5, h5, 
+  .img-block, .offer .img-block,
+  .services-container,
+  .container-40 .content,
+  .appdev .services-container,
   .ABN-About .container,
   .row,
   .container {

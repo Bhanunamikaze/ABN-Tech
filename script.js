@@ -1,3 +1,26 @@
+
+// Get in touch Hover Effect
+document.addEventListener('DOMContentLoaded', function() { 
+    const navContainer = document.querySelector('.navbar'); 
+
+    navContainer.addEventListener('mouseover', (event) => {
+        if (event.target.classList.contains('link-get-in-touch')) {
+            const link = event.target.closest('li').querySelector('.link');
+            link.style.opacity = '0';
+        }
+    });
+
+    navContainer.addEventListener('mouseout', (event) => {
+        if (event.target.classList.contains('link-get-in-touch')) {
+            const link = event.target.closest('li').querySelector('.link');
+            link.style.opacity = 'unset'; 
+        }
+    });
+});
+
+
+
+// Navigation bar Desktop Submenu
 function showSubmenu(element) {
     var submenu = element.nextElementSibling;
     submenu.style.display = "flex";
@@ -15,7 +38,6 @@ function hideSubmenu(event) {
     }
 }
 
-// Attach event listeners for services label
 var servicesLabel = document.querySelector(".services-label");
 servicesLabel.addEventListener("mouseover", function() {
     showSubmenu(this);
@@ -23,7 +45,6 @@ servicesLabel.addEventListener("mouseover", function() {
 servicesLabel.addEventListener("mouseout", hideSubmenu);
 document.getElementById("servicesSubmenu").addEventListener("mouseout", hideSubmenu);
 
-// Attach event listeners for products label
 var productsLabel = document.querySelector(".products-label");
 productsLabel.addEventListener("mouseover", function() {
     showSubmenu(this);
@@ -31,7 +52,7 @@ productsLabel.addEventListener("mouseover", function() {
 productsLabel.addEventListener("mouseout", hideSubmenu);
 document.getElementById("productsSubmenu").addEventListener("mouseout", hideSubmenu);
 
-// Additional event listener for submenu mouseout
+
   var servicesSubmenu = document.getElementById("servicesSubmenu");
   servicesSubmenu.addEventListener("mouseout", function(event) {
       if (!servicesSubmenu.contains(event.relatedTarget)) {
@@ -52,6 +73,7 @@ document.getElementById("productsSubmenu").addEventListener("mouseout", hideSubm
   });
 
 
+  // Navigation bar for Mobile SubMenu
   var dropdown = document.getElementsByClassName("dropdown-btn");
   var i;
 
@@ -77,19 +99,31 @@ const totalSliderWidth = images.length * imageWidth;
 slider.style.width = `${totalSliderWidth}px`;
 
 
-// JS for Hover Effect for get-in-touch 
-const linkDiv = document.querySelector('.link');
-const getInTouchLink = document.querySelector('.link-get-in-touch');
+// Contact us Form 
+function submitForm() {
+    var firstName = document.getElementById("first-name").value;
+    var lastName = document.getElementById("last-name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
 
-getInTouchLink.addEventListener('mouseover', () => {
-    linkDiv.style.backgroundColor = 'white';
-    linkDiv.classList.add('hover-effect');
-    getInTouchLink.classList.add('hover-effect');
-});
+    var formData = new FormData();
+    formData.append("first-name", firstName);
+    formData.append("last-name", lastName);
+    formData.append("email", email);
+    formData.append("phone", phone);
 
-getInTouchLink.addEventListener('mouseout', () => {
-    linkDiv.classList.remove('hover-effect');
-    getInTouchLink.classList.remove('hover-effect');
-    linkDiv.style.backgroundColor = '#e9792f';
-});
-
+    var xhr = new XMLHttpRequest();
+    // Change filename4
+    xhr.open("POST", "submit.php"); 
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          alert(xhr.responseText); 
+          document.getElementById("contact-form").reset();
+        } else {
+          alert('Oops! Something went wrong. Please try again later.');
+        }
+      }
+    };
+    xhr.send(formData);
+  }
