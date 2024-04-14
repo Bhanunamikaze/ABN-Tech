@@ -121,6 +121,7 @@ section {
   width: 95%;
   height: 2px;  
   background-color: #fffffa24; 
+  z-index: 20;
 }
 
 
@@ -429,6 +430,7 @@ section {
   letter-spacing: 2px;
   z-index: 22;
 }
+
 
 
 .menu-icon {
@@ -2094,8 +2096,8 @@ color: white;
 
   .menu-icon {
     position: absolute;
-    top:  26px;
-    left: 12px;
+    top:  22px;
+    left: -13px;
     margin: 15px;
     font-size: 30px;
     cursor: pointer;
@@ -2733,7 +2735,7 @@ color: white;
   }
 
   .ABN-Careers .container {
-    width: 80%;
+    width: 100%;
     padding-left: 20px; 
     padding-bottom: 40px;
     align-items: baseline;
@@ -2847,6 +2849,10 @@ color: white;
   .container {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .ABN .contactus {
+    padding: 50px 0;
   }
 
 }
