@@ -805,6 +805,7 @@ section {
   background-color: #020412;
   width: 60%; 
   padding: 20px; 
+  z-index: 10;
 }
 
 .left-container {
@@ -819,7 +820,7 @@ section {
 
 .textr-container {
   position: absolute;
-  z-index: 2;
+  z-index: 10;
   right: 0;
   background-color: #020412;
   width: 50%; 
