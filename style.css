@@ -292,7 +292,7 @@ section {
   justify-content: space-around; 
   gap:0px;
   padding-top: calc(5% + 150px);
-  padding-bottom: 10%;
+  padding-bottom: 5%;
   padding-right: 4%;
   overflow: hidden;
 }
@@ -758,10 +758,12 @@ section {
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
-  margin: 0 0 20px; /* Space between the h1 and the button */
+  margin: 0 0 20px;
   text-align: center; /* Ensures text is centered */
-  width: 100%; /* Ensures full width */
+  width: 100%; 
+
 }
+
 
 .button {
   border-radius: 8px;
@@ -798,7 +800,7 @@ section {
   text-align: center;
   position: relative;
   align-items: flex-start;
-  margin: 50px 0;
+  margin: 50px 0 100px;
   overflow: hidden;
 }
 
@@ -1478,7 +1480,7 @@ color: white;
   padding: 20px;
   background-color: transparent;
   margin-right: 10%;
-  margin-left: 10%;
+  margin-left: 6%;
   border-radius: 5px;
 }
 
@@ -1669,6 +1671,7 @@ color: white;
   padding: 0 10%;
 }
 
+.ABN-TechnicalStaffing .our-approach h5,
 .ABN-TechnicalStaffing .our-approach p {
   padding: 0 20px ;
 }
@@ -1677,8 +1680,9 @@ color: white;
   flex-direction: column;
   background: transparent;
 }
+
 .ABN-TechnicalStaffing .challenges .single-container h2 {
-  text-align: center;
+  text-align: left;
 }
 
 
@@ -1779,7 +1783,68 @@ color: white;
 
 }
 
+.ABN-Contract .our-process .row .container{
+  align-items: baseline;
+}
 
+.ABN-Contract .our-process h5,
+.whyus .container h5 {
+  margin-bottom: 0;
+}
+
+.ABN-Contract .contactus h2 {
+  margin-top: 40px;
+}
+
+.ABN-Contract .contactus {
+  margin-top: 30px;
+}
+
+.ABN-Permanent .what-we-offer h2 {
+  margin: 0;
+  padding: 0;
+} 
+
+.ABN-Permanent .appdev,
+.ABN-Permanent .what-we-offer .offer {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.ABN-Permanent .our-process h6 {
+  text-align: left;
+  text-transform:none;
+}
+
+.our-process h2{
+  margin: 0;
+  padding: 0;
+}
+
+.our-process  h6 {
+  margin-top: 10px;
+}
+
+.our-approach h5 {
+  padding: 0;
+  margin: 0;
+}
+
+.ABN-Permanent .our-approach .single-container {
+  align-items: baseline;
+}
+
+.ABN-Permanent .our-approach .single-container h5{
+  margin-top: 20px;
+}
+
+.ABN-TechnicalStaffing .our-approach .container {
+  align-items: baseline;
+}
+
+.ABN-ManagedServices .our-approach .container {
+  align-items: baseline;
+}
 
 
 
@@ -1895,7 +1960,14 @@ color: white;
     bottom: -30%;
     right: -11%;
   }
-  
+
+  .ABN-About .container-wrapper1{
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: baseline;
+  }
+
 }
 
 
@@ -1905,7 +1977,6 @@ color: white;
 
   body, html {
     height: 100%;
-    margin: 0;
   }
 
   .header {
@@ -1918,6 +1989,7 @@ color: white;
 
   h1 {
     font-size: 28px;
+    line-height: 44px;
   }
 
   h2 {
@@ -1960,7 +2032,7 @@ color: white;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 30px;
+    padding: 0 16px;
   }
 
   .top-gradient {
@@ -2096,7 +2168,7 @@ color: white;
   .sidenav a,
   .sidenav h4, 
   .dropdown-btn {
-    padding: 6px 6px 12px 35px;
+    padding: 6px 6px 24px 35px;
     color: #FFF;
     font-family: Inter;
     font-size: 18px;
@@ -2349,7 +2421,6 @@ color: white;
   
   .container-60 h2,
   .container-40 h2,
-  .whyus h2,
   .what-we-offer h2{
     font-size: 25px;
     text-align: left;
@@ -2475,6 +2546,20 @@ color: white;
     width: calc(50% - 40px);
   }
 
+  .appdev {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .ABN-TechnicalStaffing .offer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .ABN-TechnicalStaffing .offer .img-block{
+    margin-bottom: calc(25% - 25px )
+  }
+
   .appdev .img-block{
     position: unset;
     max-width: 50%;
@@ -2488,9 +2573,10 @@ color: white;
   .container-wrapper2 {
     display: flex;
     height: auto;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: baseline;
   }
+
 
   .right-container,
   .left-container {
@@ -2509,7 +2595,7 @@ color: white;
   }
 
   .ABN-About .left-container .img-block {
-    bottom: calc(-18%);
+    bottom: calc(-1%);
   }
 
   .left-container {
@@ -2536,11 +2622,50 @@ color: white;
 
   .ABN-ManagedServices .services-gradient {
     top: 39%;
-    left: 0%;
+    left: -5%;
   }
 
-}
+  .ABN-Mobile .whyus .container {
+    align-items: baseline;
+  }
 
+  .ABN-Contract .our-process .single-row,
+  .ABN-Mobile .our-process .single-row {
+    margin: 0 1%;
+  }
+
+  .ABN-Contract .our-process .row .container {
+    width: 100%;
+  }
+  
+  .img-block {
+    max-width: 45%;
+    margin-bottom: 0;
+  }
+
+  .ABN-Permanent .our-process .single-container,
+  .ABN-Permanent .our-process .container {
+    align-items: center;
+  }
+
+  .ABN .img-block{
+    max-width: 55%;
+  }
+
+  .ABN-About .textl-container {
+    margin-top: 30px;
+    margin-bottom:0;
+  }
+
+  .ABN-About .container-wrapper1,
+  .ABN-About .container-wrapper2 {
+    padding: 0;
+    margin: 0 0 40px;
+
+  }
+
+
+}
 
  
 @media (max-width: 480px) {
@@ -2549,10 +2674,6 @@ color: white;
   h5 {
     font-size: 14px;
   }
-  .main-container{
-    padding-right: 0;
-  }
-
 
   .container {
     width: 100%;
@@ -2642,14 +2763,51 @@ color: white;
  
   }
 
+  .ABN-ManagedServices .services-gradient {
+    width: 110%;
+  }
+
   .services-gradient {
-    left: 0;
+    left: -18px;
+    width: 110%;
   }
 
   .top-gradient {
     top:-14%;
-    right: -15px;
+    right: -4px;
   }
+
+  .bottom-gradient {
+    left: -15px;
+    width: 110%;
+    bottom: -27px;
+  }
+
+  .img-block {
+    max-width: 65%;
+  }
+
+  .ABN .img-block{
+    max-width: 75%;
+  }
+
+  
+  .ABN-About .stat-item { 
+    width: calc(50% - 40px);
+    transform: scale(1);
+    height: 210px;
+    align-items: flex-start;
+  }
+
+  .stat-number {
+    font-size: 35px;
+  }
+
+  .stat-description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
 
 
 }
