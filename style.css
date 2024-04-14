@@ -2086,7 +2086,7 @@ color: white;
     }
 
   .sidenav {
-    margin-top: 5%;
+    margin-top: 10%;
     position: relative; /* Change from fixed to relative */
     z-index: 1001; /* Ensure it's above the overlay and menu-icon */
     display: block; /* Show the side navigation when menu is active */
@@ -2155,12 +2155,6 @@ color: white;
     -webkit-text-fill-color: transparent;
   }
 
-  /* Main content */
-  .main {
-    margin-left: 200px; /* Same as the width of the sidenav */
-    font-size: 20px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
-  }
 
   .dropdown-container {
     display: none;
@@ -2168,30 +2162,15 @@ color: white;
     padding-left: 8px;
   }
 
-
-
-
   .logo {
     position: absolute;
     width: 117px;
     height: 35px;
-    top: 20px;
     z-index: 0;
-    
   }
 
   .tech-corp {
-    position: absolute;
-    height: 12px;
-    top: 55px;
-    font-family: "Poppins", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 9.1px;
-    letter-spacing: 8.38px;
-    line-height: 11.9px;
-    white-space: nowrap;
-    z-index: 0;
+    top: 45px;
   }
 
 
@@ -2665,6 +2644,11 @@ color: white;
 
   .services-gradient {
     left: 0;
+  }
+
+  .top-gradient {
+    top:-14%;
+    right: -15px;
   }
 
 
