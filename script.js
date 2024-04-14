@@ -3,7 +3,6 @@ function showSubmenu(element) {
     submenu.style.display = "flex";
 
     var label = element;
-    label.classList.add("underline");
     label.classList.add("label-gradient");
 }
 
@@ -12,7 +11,6 @@ function hideSubmenu(event) {
     var submenu = target.nextElementSibling;
     if (!submenu.contains(event.relatedTarget)) {
         submenu.style.display = "none";
-        target.classList.remove("underline");
         target.classList.remove("label-gradient");
     }
 }

@@ -109,6 +109,7 @@ section {
   right: 0;
   position: relative;
   background: transparent;
+  margin: 15px 0;
 }
 
 
@@ -232,6 +233,7 @@ section {
 
 /* Gradient For Navigation bar - On-Page effect */
 .label-gradient,
+.footer-container a:hover,
 .navbar ul li a:hover,
 .staffing-page .navbar ul li a[href="staffing.html"],
 .appdev-page .navbar ul li a[href="app-development.html"],
@@ -369,7 +371,6 @@ section {
 }
 
 
-
 .nav-wrapper .navbar .services-menu:hover .submenu {
   display: block;
 }
@@ -379,11 +380,9 @@ section {
 }
 
 
-
 .logo-link {
   position: absolute;
-  top: 0;
-  top: 0;
+  top: 17px;
   left: 55px;
   
 }
@@ -399,8 +398,8 @@ section {
 .tech-corp {
   position: absolute;
   height: 12px;
-  top: 32px;
-  left: 55px;
+  top: 43px;
+  left: 57px;
   font-family: "Poppins", Helvetica;
   font-weight: 400;
   color: #ffffff;
@@ -537,6 +536,10 @@ section {
   padding: 20px;
   color: #fffffa;
   text-decoration: none;
+}
+
+.footer-bottom p {
+  font-size: 12px;
 }
 
 .copyright-link {
@@ -725,6 +728,14 @@ section {
 
 }
 
+.data-text h1{
+  margin-top: 3px;
+}
+
+.data-text h2 {
+  margin-top: -37px;
+}
+
 .contactus {
   display: flex;
   flex-direction: column;
@@ -766,6 +777,12 @@ section {
   cursor: pointer; /* Changes the mouse cursor on hover */
   width: fit-content; 
   margin-top: 30px;
+  font-family: Inter;
+}
+
+.button:hover {
+  
+  background: linear-gradient(82deg, #459398 2.48%, #0972CE 101.77%);
 }
 
 .container-wrapper1, 
@@ -785,9 +802,6 @@ section {
   overflow: hidden;
 }
 
-.get-free-quote {
-  margin:150px 0;
-}
 
 .right-container {
   position: absolute;
@@ -795,7 +809,7 @@ section {
   height: 100%; 
   left: 0; 
   background: rgba(45, 50, 85, 0.08);
-  transform: translateX(70%); 
+  transform: translateX(55%); 
   z-index: -1; 
 }
 
@@ -803,8 +817,8 @@ section {
   position: relative;
   z-index: 2;
   background-color: #020412;
-  width: 60%; 
-  padding: 20px; 
+  width: 50%; 
+  padding: 90px 40px; 
   z-index: 10;
 }
 
@@ -824,7 +838,7 @@ section {
   right: 0;
   background-color: #020412;
   width: 50%; 
-  padding: 20px 50px;
+  padding: 90px 40px; 
 
 }
 
@@ -833,11 +847,11 @@ section {
   max-height: 400px;
   height: auto;
   right: 13%;
-  bottom: calc(24%);
+  bottom: calc(10%);
 }
 
 .right-container .img-block {
-  max-width: 40%;
+  max-width: 60%;
   max-height: 400px;
   height: auto;
   left: 22%;
@@ -848,7 +862,14 @@ section {
   max-width: 500px;
 }
 
+.ABN-About .textl-container,
+  .ABN-About .textr-container {
+  padding: 40px;
+}
 
+.ABN-About .left-container .img-block  {
+  bottom: calc(19%);
+}
 
 .arrow-divider {
   height: 152px;
@@ -1206,6 +1227,9 @@ color: white;
     text-decoration: none;
   } 
 
+  .button-applynow:hover{
+    background: rgba(255, 255, 255, 0.10);
+  }
   
 .appdev,
 .offer {
@@ -1227,7 +1251,7 @@ color: white;
 }
 
 .img-block {
-  max-width: 35%;
+  max-width: 25%;
   max-height: 310px;
   margin: 10px;
   margin-bottom: 30px;
@@ -1252,6 +1276,10 @@ color: white;
   padding-bottom: 0;
   margin-bottom: 0;
 
+}
+
+.approach .container h3{
+  margin: 0;
 }
 
 .methodologies h2,
@@ -1435,7 +1463,7 @@ color: white;
 
 .offer{
   position: relative;
-  margin-bottom: 10%;
+  margin-bottom: 4%;
 }
 
 .offer .img-block {
@@ -2269,22 +2297,18 @@ color: white;
   .contactus-form,
   .form-fields-container,
   .contactus-row {
-    flex-direction: column;
     align-items: flex-start;
     padding: 0px;
   }
 
  
-  .contactus-row  { 
-    margin-right:110px ;
-  }
-
   .form-fields-container {
     margin-right:10px;
   }
   
   .quote-container {
     padding-left: 15px;
+    width: 100%;
   }
   
   input[type="text"],
@@ -2503,6 +2527,10 @@ color: white;
   .left-container .img-block  {
     max-width: 50%;
     left: 0;
+  }
+
+  .ABN-About .left-container .img-block {
+    bottom: calc(-18%);
   }
 
   .left-container {
