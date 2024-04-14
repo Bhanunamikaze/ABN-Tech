@@ -581,12 +581,17 @@ section {
 
 }
 
+.service a {
+  text-decoration: none;
+}
+
+
 .hero {
   margin-top: 150px; 
-  width: 100%; /* Ensures section fills width of main-container */
-  display: flex; /* Aligns SVGs within the hero section */
-  justify-content: space-between; /* Spreads out children (SVGs) */
-  align-items: start; /* Aligns children to the top */
+  width: 100%; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: start; 
   position: relative;
   padding-bottom: 45%;
  
@@ -1513,6 +1518,7 @@ color: white;
   letter-spacing: 0.36px;
 }
 
+.service a:hover,
 .ABN-Staffing .staffing .row .container:hover{
   background: #23263A;
 }
@@ -2324,7 +2330,7 @@ color: white;
     align-items: flex-start; 
     height: auto; 
     padding: 20px 20px;
-    margin: 20px 0 50px;
+    margin: 20px 0 30px;
     width: 100%;
   }
 
@@ -2362,6 +2368,10 @@ color: white;
     width: 100%;
   }
   
+  .sendmail-box {
+    margin-top: 0;
+  }
+
   input[type="text"],
   input[type="email"],
   input[type="tel"],
@@ -2696,6 +2706,10 @@ color: white;
     width: 100px; /* Adjust size as needed */
     height: 100px; /* Adjust size as needed */
   }
+
+  .quote-container {
+    margin-bottom: 0;
+  }
   
   .quote-container,
   .contactus-form {
@@ -2808,6 +2822,31 @@ color: white;
     line-height: 20px;
   }
 
+  .get-free-quote {
+    margin-top: 0;
+    
+  }
 
+  .stats-container,
+  .footer-bottom,
+  .footer-main,
+  .footer-container,
+  .quote-container,
+  .textl-container,
+  .textr-container,
+  .contactus-form,
+  .get-free-quote,
+  .container-wrapper1,
+  .container-wrapper2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .ABN-About .container,
+  .row,
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
 }
