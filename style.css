@@ -661,7 +661,16 @@ section {
 
 }
 
-  
+.ABN-Permanent .our-approach .row > .container:last-child,
+.our-process .row > .container:last-child {
+  margin-right: auto; 
+}
+
+.dataengg-page .our-process .row > .container:last-child {
+  width: 100%;
+  margin: 0 1%; 
+}
+
 .image-placeholder {
   max-width: 224px; 
   width: 100%; 
@@ -1646,7 +1655,7 @@ color: white;
 .ABN-Staffing .our-process h5,
 .ABN-Permanent .our-approach h5,
 .ABN-Contract .contactus h5 {
-  padding: 0 30px;
+  padding: 0 20px;
   text-transform: capitalize;
 
 }
@@ -1841,6 +1850,7 @@ color: white;
   text-align: left;
   text-transform:none;
 }
+
 
 .our-process h2{
   margin-top: 0;
