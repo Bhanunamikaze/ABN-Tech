@@ -143,22 +143,19 @@ section {
 
 .top-gradient {
   position: absolute;
-  top: -17%; /* Adjusted to account for body margin */
+  top: -29%;
   height: 30px;
   width: 96%;
   z-index: 0;
-  right: -12%;
+  right: 0;
 }
 
 .bottom-gradient {
-  width: 1146px;
-  height: 1182px;
   position: absolute;
   margin: 0 !important;
   bottom: 0px;
-  left: -7%;
+  left: -17%;
   overflow: hidden;
-  flex-shrink: 0;
   object-fit: cover;
   z-index: -1;
 }
@@ -303,9 +300,8 @@ section {
 .nav-wrapper .submenu {
   position: absolute;
   top: -150%;
-  left: -5%;
+  left: 0;
   right: 0;
-  width: 100vw;
   z-index: 20;
   background-color: black; 
   display: flex;
@@ -327,10 +323,14 @@ section {
   height: 190px;
   flex-shrink: 0;
   align-items: center;
-  width: calc(100% - 5px);
- 
+  width: calc(90% - 15px);
 }
 
+.nav-wrapper .products-menu .submenu a p {
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .nav-sm-container {
   margin-top: 15px;
@@ -342,7 +342,10 @@ section {
 
 .nav-sm-container img { 
   margin-bottom: 10px; 
+  height: auto;
+  max-width: 100%;
 }
+
 
 .nav-wrapper .submenu ul {
   display: flex;
@@ -598,7 +601,7 @@ input[type="checkbox"]{
 }
 
 section {
-  margin-bottom: calc(3vw + 1vw)
+  margin-bottom: calc(2vw + 1vw)
 
 }
 
@@ -1272,7 +1275,6 @@ color: white;
 .offer {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 50px;
   margin-top: 10px;
   justify-content: space-between;
   position: relative;
@@ -1884,13 +1886,13 @@ color: white;
 }
 
 
-@media (max-width: 1920px) {
+@media (min-width: 1920px) {
 
-  body {
-    margin: 0 1%;
+  .bottom-gradient, .services-gradient,
+  .top-gradient {
+    display: none;
   }
 }
-
 
 @media (max-width: 1440px) {
 
@@ -2449,7 +2451,7 @@ color: white;
   }
 
   .ask-questions {
-    margin-top: 100px;
+    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -2460,13 +2462,20 @@ color: white;
 
   .job-info {
     flex-wrap: wrap;
+    justify-content: unset;
+
   }
 
   .job-info .container {
-    width: calc(50% - 40px);
+    width: 50%;
     height: auto;
 
   }
+
+  .job-info > .container:last-child {
+    margin-right: auto; 
+}
+
 
   .container-60{
     display: block;
@@ -2866,7 +2875,8 @@ color: white;
   }
 
   .get-free-quote {
-    margin-top: 0;
+    margin-top: 30px;
+    height: 650px;
     
   }
 
