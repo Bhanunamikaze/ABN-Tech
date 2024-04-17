@@ -8,8 +8,8 @@ body {
   background-color: #020412; 
   color: white;
   height: 100%;
-  margin: 0 2%;
-
+  margin: 0 auto;
+  max-width: 1920px;
 }
 
 

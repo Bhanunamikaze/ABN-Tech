@@ -143,10 +143,11 @@ section {
 
 .top-gradient {
   position: absolute;
-  top: -20%; /* Adjusted to account for body margin */
+  top: -17%; /* Adjusted to account for body margin */
   height: 30px;
   width: 96%;
   z-index: 0;
+  right: -12%;
 }
 
 .bottom-gradient {
@@ -167,7 +168,7 @@ section {
   position: absolute; 
   overflow: hidden;
   top: 18%; 
-  left: -7%;
+  left: -18%;
   object-fit: cover;
   z-index: -1;
 }
@@ -597,7 +598,7 @@ input[type="checkbox"]{
 }
 
 section {
-  margin-bottom: calc(6vw + 2vw)
+  margin-bottom: calc(3vw + 1vw)
 
 }
 
@@ -613,7 +614,7 @@ section {
   justify-content: space-between; 
   align-items: start; 
   position: relative;
-  padding-bottom: 45%;
+  padding-bottom: 35%;
  
 }
 
@@ -623,7 +624,7 @@ section {
   bottom: 0;
   width: 100%; 
   z-index: 1; 
-  max-width: 100%;
+  max-width: 90%;
   top: -100px;
 }
 
@@ -1202,13 +1203,13 @@ color: white;
   }
 
   .job-info .container {
-    width: calc(25% - 40px);
+    width: calc(20% - 40px);
     margin: 0;
     height: 120px;
     background: transparent;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: baseline; 
   }
 
 
@@ -1883,8 +1884,20 @@ color: white;
 }
 
 
+@media (max-width: 1920px) {
+
+  body {
+    margin: 0 1%;
+  }
+}
+
 
 @media (max-width: 1440px) {
+
+  body {
+    margin: 0 2%;
+  }
+
   .nav-wrapper div ul {
     gap: 75px;
   }
