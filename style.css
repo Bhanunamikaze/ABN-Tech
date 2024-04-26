@@ -165,7 +165,7 @@ section {
   position: absolute; 
   overflow: hidden;
   top: 18%; 
-  left: -18%;
+  left: -9%;
   object-fit: cover;
   z-index: -1;
 }
@@ -188,6 +188,7 @@ section {
 
 .ABN-appdev .methodologies .services-gradient {
   top: 20%;
+  height: 109%;
 }
 
 
@@ -1886,7 +1887,7 @@ color: white;
 }
 
 
-@media (min-width: 1920px) {
+@media (min-width: 2440px) {
 
   .bottom-gradient, .services-gradient,
   .top-gradient {
@@ -1894,10 +1895,31 @@ color: white;
   }
 }
 
+@media (max-width: 2439px) { 
+  .bottom-gradient,
+  .services-gradient {
+    left: -35%;
+  }
+
+}
+
+@media (max-width: 1920px) { 
+  .bottom-gradient,
+  .services-gradient {
+    left: -20%;
+  }
+
+}
+
 @media (max-width: 1440px) {
 
   body {
     margin: 0 2%;
+  }
+
+  .bottom-gradient,
+  .services-gradient {
+    left: -9%;
   }
 
   .nav-wrapper div ul {
@@ -1962,6 +1984,12 @@ color: white;
 
   .nav-wrapper .submenu a {
     font-size: 11px;
+  }
+
+  .nav-wrapper .products-menu .submenu a {
+    max-width: 220px;
+    height: 180px;
+    width: calc(28% - 40px); 
   }
 
   .link {
@@ -2670,6 +2698,10 @@ color: white;
 
   .ABN-Contactus .offices .row .container {
     width: 100%;
+  }
+
+  .services-gradient {
+    width: 120%;
   }
 
   .ABN-Contract .services-gradient {
