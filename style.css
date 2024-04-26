@@ -999,11 +999,39 @@ input[type="message"]  {
   font-style: normal;
   font-weight: 400;
   line-height: 26px; 
+  transition: padding-top 0.3s ease;
 }
 
 input[type="message"]  {
   width: 100%;
 }
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="message"]:focus {
+    padding-top: 40px;
+    outline: none;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="message"]::placeholder {
+    transition: transform 0.3s ease; 
+    opacity: 1;
+}
+
+
+input[type="text"]:focus::placeholder,
+input[type="email"]:focus::placeholder,
+input[type="tel"]:focus::placeholder,
+input[type="message"]:focus::placeholder {
+    transform: translateY(-30px); 
+    opacity: 1;
+}
+
 
 .ABN-Contactus .ask-questions input[type="text"],
 .ABN-Contactus .ask-questions input[type="email"],
