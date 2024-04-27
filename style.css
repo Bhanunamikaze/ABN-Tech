@@ -1,3 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:500,400,700|Poppins:400");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #020412; 
+  color: white;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
 .ABN {
   display: flex;
   flex-direction: column;
@@ -102,23 +117,6 @@ section {
   text-align: left;
 }
 
-/* - FLOATING HEADER - NEED SOME ADJUSTMENTS
- 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; 
-  z-index: 1200; 
-  color: #ffffff;
-  background: black;
-  padding: 20px ;
-  right: 0;
-  margin: 15px 0;
-}
-
-*/
-
 .header {
   color: #ffffff;
   padding: 20px ;
@@ -183,7 +181,7 @@ section {
 }
 
 .ABN-appdev .services-gradient {
-  top: -9%;
+  top: -60%;
 }
 
 .ABN-appdev .methodologies .services-gradient {
@@ -296,23 +294,27 @@ section {
   -webkit-text-fill-color: transparent ;
 }
 
-
-
 .nav-wrapper .submenu {
-  position: absolute;
-  top: -150%;
+  position: fixed;
+  top: 0;          
   left: 0;
   right: 0;
+  width: 100vw; 
   z-index: 20;
   background-color: black; 
   display: flex;
-  justify-content: space-around; 
-  gap:0px;
-  padding-top: calc(5% + 150px);
+  justify-content: center;
+  gap:10%;
+  padding-top: calc(5% + 40px); 
   padding-bottom: 5%;
-  padding-right: 4%;
   overflow: hidden;
 }
+
+.nav-wrapper .products-menu .submenu { 
+  gap:3%;
+  padding-top: calc(5% + 50px); 
+}
+
 
 .nav-wrapper .products-menu .submenu a {
   display: flex;
@@ -361,7 +363,6 @@ section {
 .nav-wrapper .submenu > li {
   display: flex;
   flex-direction: row; 
-
 }
 
 .nav-wrapper  .submenu ul li {
@@ -552,6 +553,7 @@ section {
   padding: 10px 21.5px 18px 21.5px;
   justify-content: center;
   align-items: center;
+  margin-top: 23px;
   }
 
 .footer-bottom {
@@ -664,6 +666,11 @@ section {
   width: calc(100% - 40px);
   height: auto;
 
+}
+
+.ABN-About .vision .row {
+  margin: 0;
+  gap: 0;
 }
 
 .ABN-Permanent .our-approach .row > .container:last-child,
@@ -944,6 +951,7 @@ section {
   display:inline;
   margin-top: 30px;
   margin-bottom: 30px;
+  margin-left: 50px;
 
 }
 .contactus-form {
@@ -965,6 +973,10 @@ section {
 
 .ABN-Contactus .ask-questions .contactus-row {
   padding-left:  0;
+}
+
+.ABN-Contactus .ask-questions .button {
+  margin-left: 0;
 }
 
 .form-fields-container {
@@ -1174,7 +1186,11 @@ color: white;
   font-weight: 400;
   line-height: 30px; 
   padding-top: 30px;
-  }
+  } 
+
+.ABN-Careers .row {
+  margin: 0;
+}
 
 .ABN-Careers .container,
 .ABN-Contactus .container {
@@ -2007,11 +2023,6 @@ color: white;
   .nav-wrapper div ul li a,
   .navbar  label{  
     font-size: min(max(12px, calc(0.9rem + 0.5vw)), 14px); 
-  
-  }
-
-  .nav-wrapper .submenu a {
-    font-size: 11px;
   }
 
   .nav-wrapper .products-menu .submenu a {
@@ -2019,6 +2030,17 @@ color: white;
     height: 180px;
     width: calc(28% - 40px); 
   }
+
+  .nav-wrapper  .submenu { 
+    gap:3%;
+    padding-top: calc(5% + 50px); 
+  }
+
+  .nav-wrapper .products-menu .submenu { 
+    gap:1%;
+    padding-top: calc(5% + 50px); 
+  }
+
 
   .link {
     top: 10px;
@@ -2041,8 +2063,8 @@ color: white;
   }
 
   .arrow-container {
-    font-size: 48px; /* Adjust size for smaller screens */
-    order: -1; /* Make sure the arrow appears on top */
+    font-size: 48px; 
+    order: -1; 
   }
 
   .form-fields-container {
@@ -2056,7 +2078,7 @@ color: white;
   input[type="text"],
   input[type="email"],
   input[type="tel"] {
-    width: 100%; /* Full width for smaller screens */
+    width: 100%; 
   }
 
   .logo-link, .tech-corp {
